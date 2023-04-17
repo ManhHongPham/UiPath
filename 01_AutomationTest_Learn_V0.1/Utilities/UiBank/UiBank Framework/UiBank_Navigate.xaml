@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>769,1073</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>794,1073</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UiBank_Navigate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
