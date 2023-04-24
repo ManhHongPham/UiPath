@@ -1,0 +1,189 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_02_SubmitForm" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_UrlForm" Type="InArgument(x:String)" />
+    <x:Property Name="in_dtEmployee" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_Name" Type="InArgument(x:String)" />
+    <x:Property Name="in_Phone" Type="InArgument(x:String)" />
+    <x:Property Name="in_BirthDate" Type="InArgument(x:String)" />
+    <x:Property Name="in_Email" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1223,1697</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_02_SubmitForm_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_02_SubmitForm" sap:VirtualizedContainerService.HintSize="546,1632" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Name" />
+      <Variable x:TypeArguments="x:String" Name="Phone" />
+      <Variable x:TypeArguments="x:String" Name="Birthdate" />
+      <Variable x:TypeArguments="x:String" Name="Email" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Advanced UI Automation Input Form" sap:VirtualizedContainerService.HintSize="484,1521" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1304" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Text="[in_Email]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Kj012FOxF02IJ5AsUfcjV6dYx_Rv13RDp5b_n_KH_8dURUExUkxKRk5PNDY0WUJaREhRS1Y2VFJTWC4u" DesignTimeRectangle="237, 424, 730, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='--W-42' aaname='' /&gt;" Guid="413f9c73-2d22-4982-b5c8-b9f00d256f1d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAmCAYAAADzypwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATISURBVHhe7dzPaiRFHAfwgMdF8Jly8zG8zwN42EXFF8g8gOBZMOScq3hbchXNzcugh9VNIAsGt+2q7pququ5JZjI9CYmfD5Q/u6f/VNfpm+LHHq2ur5vVVTtUVVVVVVVVVT1YPYoHV1fdSVVVVVVVVVVVD1K7He9+vLu5aW5ub5t/P35sAACA3YUsHTL1uw8f1jk7jKMuhV/F0C1wAwDAPEK2Dhk75e11j3dI5QAAwHxu/rntdrzbvL3u8bbbDQAA8woZe9TjDQAAzC/b8e56TgAAgPmlvL3u8QYAAOY36vEGAADmp8cbAAAeQcrberwBAOCAUt7W4w0AAAeU8vYePd4XzfL4uDmux8lF/zsAADBDj3cXvJdv+8MHWp0umuPFWbPqjwEA4CXJdrwf2uMteAMAwH1S3t6jx/ue4L06axbHi+ZsVbakLE5TxF41Z4usRSWMLIDHQJ79VrwnPfttqOH3ZTubyvr9/XHydlldX7fMVPeE60d/GFTfvs18evV3DesRdGsSzl2cDNeM3h+/Ifs9tPdMfW+8rjwX35+1A+29zgAA3Gm2Hu+7g3cV1jYFwSpYjs71zyqDbvvsUSDODSE2FwNtCp79c4pr+lC7ftfWwfu++QTtfXkPfP1d/ZzLANy9az3HeE++humZ4+9N4X04V14zzzoDAHCX2Xq8005pGnVoGwJkMA6H4+Adnlvt3LamAnP57Amj0Fw+u3hmpji/Q/C+dz4j9Xr0wbuaU7FG8Q+D6Z3neN363u5blyfjc933z7jOAABslPL24Xq8Y2irg90WwbsPe3Wgj6MIhOPQOFaFyyJEd3OZnH9+3dbBe5v5BN29+Xdt2pFOyjXqw3lxXy8P5WFO4Z44t/5c/i2zrjMAAJukvP0IPd79cbRt8L6nl3iHQBh2cNP7wv8P83384B2/tVizej22Cd7JEOCH64d5hXu688N35msx9zoDADAt5e0D93g/IHjf99xgl0AYro3PD88tg2bRVpEpzue7yEl8fzbHreYzFar3Cd6d+rcuXF+0zxnm04Xw8tzs6wwAwKTZerz3Dd5TwTYG3+rc6nQ5PGunQBje2V7b3j8K2X2AHs9nHFDrcFzsXG85nzrox9A88ew7g3c7v3zNR6E8zr99z9S5g64zAABTsh3v/Xq8u0CXjz7IbRu8+3Px3mrntnhuHpp3DIRdwN1wfR++h3eVQTRaB9cwwnOqPzq2nk+5Zt0u9O7Be5hLO/KAHdV/KAT9ezft7ufP22OdAQAYS3l7jx7v52O0KwwAAI9khh7v52J6FxkAAB7DDD3ez0RszZhoHwEAgEeQ8nbX4/3+Je54p35qPcoAADydlLf/Fz3eAADwVFLe7nq8X+SONwAAPL2Ut19+jzcAADyhYce7Td92vAEA4DBS3u52vN9fN7/88Wf/EwAAMIeQsVPePgr/CQn8ix9+bE5++rn5/a+/+8sAAICHCJk6ZOuQsVPeXv+rJueXl82rN183n3z5uvn0zTfNZ199axiGYRiGYRjGjiNk6ZCpQ7Y+/+1y3OMdxvmvl83n333fvHrdBXDDMAzDMAzDMHYbIUuHTB2ydZ61+39OsEvhqqqqqqqqqqoepq57vIfh2LFjx44dO3bs2LHjeY+vmv8AEvzpifAG/zwAAAAASUVORK5CYII=" InformativeScreenshot="7ee7afd44130584a23e6aed992cb9aab.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="232, 382, 45, 22" ElementType="Text" FriendlyName="'Name'" FullSelectorArgument="&lt;webctrl aaname='Name' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Name' tag='SPAN' type='' class='text-format-content ' check:innerText='Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAaCAYAAAAe97TpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIySURBVFhH7VU7bgJBDOUwey20Ocg2iGMkFXCLpEJwhNAQCTpSLweYjO1nrz0sIU0EE6V4Mv7NjP3sZfJ5PidGD3kND+yffPZ9DqgbuQhUVLEEE6TUK4edqBj/O/EostgJRV16/J/4WKZp06SmmaU3tXv/+Zhe2iZNV8foM/83+EV/3In9AkVkzDeD3XBAEYcR3/0Qd4KZeEovqxkX0q1hV79nItjvK+NO7GWc6PFvc4yV9/e+CLVvUqfsAVK8+gf2dqunIa5dpF32B9vFfUN+mTf4y/8J7AQ/4rzlx8X5v9wJeoTEA2tiMbP5oTbJoQdYHu6ZtrmA+TbGmU6QN3gbN7ddpp3FXNmJbg1dH7TXmJ/sRBmDTnIHh7jINMD3DTZhqYgB8/bGjJGd0HEQu1XO+rWdQMccrOt+BC0eY2Tnwq5FuDxjweIuzyt2QpmA7mzSWe0yFSF+6ajvzDgTkT0tQtnBfcYE6WAQTSnhzxv9nwgzniG00pwXXdCvGc0/5XN8ETOyRwRjQm2U75ko8+z8S0xOqIal24lgz115pq60s9TxwQcXLztj8YE5skcmNO4dTLxDZ7vbCdI9W3b+iLy5Eybx+RUqaZzI7r5grEv3LIbzxzt6eyfI7r5OFkfnYeQQx0yc8g+W7n8i2CG5e3ig2flieTihWwtrwhbllbrkCRNLZsLsKOLVxZ3wNfJ3hPuznJyomoyaJZioG7kIqaZmGXfCUJfOOxEqu4YH9v+BnejTFyHXnZF3/uiqAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Phone'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Text="[in_Phone]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Kj012FOxF02IJ5AsUfcjV6dYx_Rv13RDp5b_n_KH_8dURUExUkxKRk5PNDY0WUJaREhRS1Y2VFJTWC4u" DesignTimeRectangle="237, 331, 730, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r71ed2979f28440c98131d5c969bee18f QuestionInfo_r71ed2*' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r71ed2979f28440c98131d5c969bee18f QuestionInfo_r71ed2*' tag='INPUT' type='' class='--W-42' aaname='' /&gt;" Guid="0e704627-0937-4325-9dcb-25e649fbdc94" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAmCAYAAADzypwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUpSURBVHhe7d0/bx81HAfgSIwVEq8pI++CPS+AoRUg3kDyBpCYEVXmroitysREty5JOkCVpqUCquPsO//O9jnJ788loenzSF+ltu+Pz9MnltvunV9cdmcXb7rzvuLPN1XbuPG8bdx43jZuPG8bN563jRvP28bjz73zy8vYiD9TaWtra2tra2tra2sv2t4L6TvVH2/fdX/9/U8HAABsL2TqkK3zrD3seF9cdq/fv+/+/fBhvBQAANhFyNav370fdrz7vL2Xzp7Y6QYAgGWFjJ3ydtzxfnX51m43AAAsLGTs1Y53OnMCAAAsb9rxDn/jsk/gAADA8lLeXv073gAAwPJS3h52vPsCAACWl/K2M94AAHCLUt6OO95nzngDAMCtSHl73PG+GLsBAIAlpby9dxYSeF+bO+mO9ve7/boOT8ZxAAAg5u1hx/tiyx3vIXgfPR+bWzp9etDtHxx3p2MbAAAeknLHe6sz3oI3AADcJNvx3vaM9w3B+/S4O9g/6I5PyyMpB09TxD7tjg+yIyqhsgAeA3k2VrwnPft5+BnGj/rZVFbvH9vJ86Pq+vrITHVPuH72i0H17evMZ1R/17QewbAmoe/kcLpm9v74Ddl4ON7T+t54XdkX358dB9p5nQEAuNZiZ7yvD95VWLsqCFbBctY3PqsMuv2zZ4E4N4XYXAy0KXiOzymuGUPt6l1rB++b5hP09+Vn4OvvGudcBuDhXas5xnvyNUzPnH9vCu9TX3nNMusMAMB1Ut7e+Yx32ilNVYe2KUAG83A4D97hudXOba8VmMtnN8xCc/ns4pmZon+D4H3jfGbq9RiDdzWnYo3iLwbtned43ere4VuPDud9w/cvuM4AAFwp5e3xjPc2/4FOFT5rMbTVwW6N4D2GvTrQxyoC4Tw0zlXhsgjRw1ya88+vWzt4rzOfYLg3/66rdqSTco3GcF7cN8pDeZhTuCfObezLv2XRdQYA4Copb9/BGe+xHa0bvG84S7xBIAw7uOl94c/TfO8+eMdvLdasXo91gncyBfjp+mle4Z6hf/rOfC2WXmcAANqyM979H/ra3C0F75ueG2wSCMO18fnhuWXQLI5VZIr+fBc5ie/P5rjWfFqhepfgPajHhnB90j9nms8Qwsu+xdcZAICmmLeHHe9b+ne8m6GtESwbwTYG36rv9OnR9KyNAmF4Z39tf/8sZI8Bej6feUCtw3Gxc73mfOqgH0Nz49nXBu9+fvmaz0J5nH//nlbfra4zAAAtKW8PO947nPEeAl1eY5BbN3iPffHeaue2eG4emjcMhEPAveL6MXxP7yqDaLQKrqHCc6pfOtaeT7lmwy705sF7mktfecCO6l8UgvG9V+3u58/bYZ0BAJjLdryHMycP2WxXGAAA7sgCZ7w/Fu1dZAAAuAspb+9wxvsjEY9mNI6PAADAHUh5e4cz3v936Ty1M8oAANyflLc/iTPeAABwXz6hM94AAHB/sh3vB37GGwAA7lHK2w/4jDcAANy/4oz3q77x29nZOAQAACwhZOzZGe+vfvq5O/zl1+7ln6/HywAAgG2ETB2ydcjYKW+vzng/+/1F9+jJt91nXz/uPn/yXffFN98rpZRSSimlNqyQpUOmDtk6ZOzZGe/wMwx8+cOP3aPHQwBXSimllFJKbVYhS4dM/exFCN1Dzl6d8U4pfChtbW1tbW1tbW1t7aXbqzPeRYXBVn8q4+3+VMbb/amMt/tTGW/3pzLe7k9lvN2fyni7P5Xxdn8q4+3+VMbb/aku3nT/AS6mChtURqCxAAAAAElFTkSuQmCC" InformativeScreenshot="59bf3c8e6ec07f6c50cc3d42ef55b489.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="232, 289, 48, 22" ElementType="Text" FriendlyName="'Phone'" FullSelectorArgument="&lt;webctrl aaname='Phone' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone' tag='SPAN' type='' class='text-format-content ' check:innerText='Phone' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAaCAYAAAD43n+tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVFhH3VY9rsIwDOYwvRaiB4EBuAZMwC1gKSpHYAKJkc5lz4sd27VDUBHSQzSDZfyX2P7imtG9bV3jCfgrGpJ91LQP1zw8ZcIJoYepdMjyCKvTlQ5cRoRyolxnKFSXA/8IocOycMXy9Lb/N7ndQ5eNGxc+2YjG21uwE+2xoFpkiX9B37RbhK6hoNmxq7ihIqEo9hsAQvQdp+Rnlf3On7elR2ruDiSHgmqxS/wPyHYPpRACOi58QQt3IFkQQn14lkAYxzEUf95BMzqfoty4s7KHO0u3vtzculR+E/JjUvmxz3hHr4btnts9RAhNK6XzhAjBBSTjDMGhao6Cbu72JN/bm1tNvE7FJXUyt6VbXazOzG41xzu73Go3jX089c9QFVCAZ8h+iBAjJvEnN9N+GAedZzvzyC8xo8DxDkATZY8eNAJehZzjSb8c0ts9JN3SBEmRnfzwMtXloK8xUUzMy4gY+cj5yDk5mkG8M6Cj/XhuAfFutvU5rLf59SOU4DJDRh86z50Wn754Scr6hYJ890GOZuep4dcuLrmH4hkSO1F6D9k3nUIoEM0RxyuEOp8UQs8+TPr8f0MozBB1OOFnZ6gHIZoh/Ko9nWf5W3tI7CSHguI9pGcIZJoVRInjGZ0TyT5edV+fZxCCePWVk3wgFvPg89/dQ2yn3wYhsRNCvBvIH329nim2hzsVQkSCEOvAP9p7Mj9s99zuoQzoo3/bv8ztHsqA543QKxqSPTOEHu4PXvvLF6Q7zKsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Birthdate'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Text="[in_BirthDate]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Kj012FOxF02IJ5AsUfcjV6dYx_Rv13RDp5b_n_KH_8dURUExUkxKRk5PNDY0WUJaREhRS1Y2VFJTWC4u" DesignTimeRectangle="237, 478, 730, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r48de342bdb1e45539f81a1cd62ac7760 QuestionInfo_r48de3*' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r48de342bdb1e45539f81a1cd62ac7760 QuestionInfo_r48de3*' tag='INPUT' type='' class='--W-42' aaname='' /&gt;" Guid="bae3a712-4900-4236-a7c4-331deda8f9c2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAt4AAAAmCAYAAADzypwCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARySURBVHhe7dxRTuM6GAZQ1sZ6uhi6EcRCEMugDzwxt2gekCZjO3FiOyltaQoa7jnSrxnHieP46cOyevP867/u+devUO2/ufTr169fv379+vXr139p/83za2i8vhalra2tra2tra2trb12+yal8NgI/768vXW/39+7Px0AAPAZMUvHTB2zdb/j3eftccf7Zf8mcAMAwEpitn7Z75sd71AxlQMAAOuJGTvn7Zt89sRuNwAArCtm7Jy3xzPeAADA+nLeHs94AwAA65ud8QYAANaX87YdbwAAuKJ6xzs0AACA9eW8bccbAACuqN7xDgUAAKwv5+3xd7zP99Rtb2+727bunoZ+AAAg5+0Lznj3wXv7ODQ/aXe/6W43D91uaAMAwE+S8/YFZ7wFbwAAOGaFM95HgvfuodvcbrqHXX0kZXOfI/aue9gUR1RiFQE8BfKir3pPHvsx/hv7t2E2jfH9Qzt73Db3t0dmmmfi/bM/DJpvP2U+g/a7pvWI+jWJ157upntm70/fUPTH4z1L35vuq6+l9xfHgS5eZwAAPpTz9vV2vFNoa8LaoSDYBMvZtWGsOuiGsWeBuDSF2FIKtDl4DuNU9wyhdnzXycH72Hyi8Fx5Br79rmHOdQDu3zXOMT1TrmEec/69ObxP1+p71llnAAA+Uu94h8b5+kCYd0pztaFtCpDRPBzOg3cct9m5DZYCcz32gllorseuxixU188I3kfnM9OuxxC8mzlVa5T+MFjeeU73jc/237q9m1/rv3/FdQYA4KCct6+8490GuxOC9xD22kCfqgqE89A414TLKkT3c1mcf3nfycH7lPlE/bPldx3akc7qNRrCefXcoAzlcU7xmTS34Vr5LauuMwAAh9Q73qHOd83gfeQs8RmBMO7g5vfF/0/z/frgnb61WrN2PU4J3tkU4Kf7p3nFZ/rr03eWa7H2OgMAsCzn7Yt/x3sxuEaLoe2E4H1s3OicQBjvTePHceugWR2rKFTXy13kLL2/mONJ81kK1ZcE717b14frpzDONJ8+hNfXVl9nAAAW5bx9vd/xXgxtC8FyIdim4Ntc291vp7HOCoTxneHe8PwsZA8Bej6feUBtw3G1c33ifNqgn0LzwtgfBu8wv3LNZ6E8zT+8Z+naVdcZAIAlOW9ffMa7D3RlDUHu1OA9XEvPNju31bhlaD4zEPYB98D9Q/ie3lUH0WQMrrHiOM0fHSfPp16zfhf6/OA9zSVUGbCT9g+FaHjvod39crwL1hkAgLkVznj/O2a7wgAA8EVy3r5gx/tfsbyLDAAAX6He8Q6NHysdzVg4PgIAAF8g5+0fvOOdz1M7owwAwPepd7xDAQAA68t5+4Lf8QYAAI7Jefvnn/EGAIBvlPP2/+BXTQAA4PvMznj/GToAAIB1xIyd8/a44/37/b3vBQAAVhEzdr3jHRovb292vQEAYCUxW8eMnfP2uOOdwvd+n1K5AA4AAJ8Ts3TM1C/7ELqHnF2d8VZKKaWUUkpdr8bf8VZKKaWUUkpdq167v5ElBblbnTjrAAAAAElFTkSuQmCC" InformativeScreenshot="c7fca486a7c28cc83db0cbb71b6e736d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="232, 435, 68, 22" ElementType="Text" FriendlyName="'Birthdate'" FullSelectorArgument="&lt;webctrl aaname='Birthdate' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Birthdate' tag='SPAN' type='' class='text-format-content ' check:innerText='Birthdate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAaCAYAAAAUqxq7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMLSURBVFhH7VY7UiMxEOUwcy2XOYgT4BhkmAts7GhdcAQnQBVkjsEH0PZf3VJ7ZjbYaBW8aqt/aj212nNz/vkpA9cBBF3K+QIYMpXSQajwzI21/r4htjxz1/Cf2scMWsCYQQuymUFDtrLOoL/A4WEq03ZfToltDSj+4TW1LeJ4V6bptjx+JLZ/gDiD3p/KZoLiG+yOzgfABD2Vk9Pl+CyP26lsnj+Dngl6CbrVUILeE9tV5HWsQZxBH3siaHeUNeqpINGp32r5JYV9BX3ooDRuRhpBjX5W5nWskXEGSQcxQcpixr63z601Fgur9r6D1uYDpB20FK8E6RnW7xe/g3wHqd6zL7puhlDRd+Ug8XSAX9x5ARJj8dKdirgvg3zNB/ZQgtwMOj3fOh+An4/NHgRfu9XM8OdEpDPIzxzavJk3XQdI0ZstHMD5zc4gKrTmYJ2P59iwt81I30EvZRfqk7jQoXkdSl49L+QikqpfOoOUTYbclvOzDtA42yj6zc4gJMP8UL5ScdZFlBMJUztL7hYkKOqD1FjTZ3WwLpwDZbNvM4P8kBa93BqzyvraQeJHSaVon8/evs4gF0+37v397QmJ+FRCPpC2V9R3z0wPSfakjvBaXH7S1/zxOyidQQB/I4DQQYm9whXm9F08gTtIfXMfgBKkM0i7vps7vp6kjvS1KGr+m/M3MgVA6Vnt9MIqrKn4e3njaNeCdG3SvX2n7+JJSgft+f0f7sEHuzTkA/wWgt54nfp19SR1vMmZJE+Id3L5OwilvxFYh9tN7Kafm0Ht25cZpLfMTwYPWeOqHi+L15arzR/qyepousrFeykdBAuUxKoQpEyKjm4WdYCuA5QgsVs+sPMNwwHUBujiyd93UF2zn+Sj7sHD15s/7YVIzW8+SK7oIJ7qwFy2H0iq250XgefVeiE+/Q6qb5EROgoQOgDhO6iFzykxXTyi6SAG66wWnDO0FxBk30HcCb1PU4/8Afk6CEJShc+tHTRwFXUGfYsc67CWDkLFkJmM/2JDdnLMoAUAQcLWkIm8lD8F+aQnD5qB2AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Text="[in_Email]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Kj012FOxF02IJ5AsUfcjV6dYx_Rv13RDp5b_n_KH_8dURUExUkxKRk5PNDY0WUJaREhRS1Y2VFJTWC4u" DesignTimeRectangle="237, 624, 730, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r602e2374f6f24332b99a57f32c585300 QuestionInfo_r602e2*' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='QuestionId_r602e2374f6f24332b99a57f32c585300 QuestionInfo_r602e2*' tag='INPUT' type='' class='--W-42' aaname='' /&gt;" Guid="0a82b2bb-44cc-4772-857f-d761cd1e5425" ImageBase64="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" InformativeScreenshot="4c4ce9ad06414970be848bd84cb4381c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="232, 582, 40, 22" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl aaname='Email' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email' tag='SPAN' type='' class='text-format-content ' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAaCAYAAADMp76xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGSSURBVFhH1ZRBcoMwDEU5DMfKxL1HNkluwTLpKdiFyQ1YMtOuYG96AVUSsisbGmimLWbxR/myJeQ3mmRd/wFbUtbZHjqLhqNTun57hFt5QWutxLT9FglbfsUQndL1WYtTswi7+z2lRM4jwivH2xHy3EDRaH+EUt37IkxqrrDLc7wU6wSlvvdXqk74rRccWPvw2yHh5sIDH27Ry9eK04TR8PQY3cCVeK+VfCUDq/MfEy7PuCLnu7zerQxRwPMgp3ZR6uurUeeo/QVq3T8m+huEeWD6GA3NuTscyBsDO4MDyH2+pzzfC/w7FMb1kf4x0aWEAwokasr3rAwsREUDOSLqctiPe7mc9PcSP0d0RJj/h9GQKOkJS06LzjH6ldBnnoTK+YHFS339Gq2Fq6PzuI/2Uv/8Duv8xK6NCEvvYW+/qZsl7HdY9Iiw6FnCi+rmPOrfCE/VcU7XpUR42F11h2tk4CD3wKOW/UvMkFpCuLVvUOxVT9rlOaKzhDegkLBXuj78H1YvGSmR84hw+nHrO5x67OETRBayF9orqmEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2f1034a7-8625-4f49-86f3-abbdf402c7c3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://forms.office.com/Pages/ResponsePage.aspx?id=Kj012FOxF02IJ5AsUfcjV6dYx_Rv13RDp5b_n_KH_8dURUExUkxKRk5PNDY0WUJaREhRS1Y2VFJTWC4u" DesignTimeRectangle="217, 713, 96, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl class='css-59' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl class='css-59' tag='BUTTON' type='' aaname='Submit' check:innerText='Submit' /&gt;" Guid="f7cb4851-ac82-452e-b31d-11bfc27ba840" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAsCAYAAACT6R1VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVHhe7ZvPS+NAFMcFj/tv7H/gv7AXwT+hV48eC3uwsJc9iUePLVZYDwqyuIuWFX+h0kWK3QqWttKCimktS6ttIEiRt+/NpNOkHaGsZpLCC3xMJvPSNO+bN9+JNFP3T0/ARIep+04HNxBeR2KNFUIbpE4HMuUKzCZX4cPiF5j+vMgECOWYcp0pX6v8DyoEyVSuWYgQoJxT7vs6qAohtXQHMMFDuZdV4vEQro7woNyPVIgukDHHiIfoghhzeCpEjl26IMYcfR2Uh+iCGHP0dWAPiQjsIRGjr8NUHf9YXCGhozyk0e1Co9PVBjHmUBXy0LVZkAigPKRp29BEUXRBjDlUhTTwDw1buiDGHMpD6ihG3eCQNbNdgKLdA7W8OJA91scOE686eIADBz/1/f/DXK4JbacJ65v6flOICqHnEBKDZlq6oHdnswx1EqHXguxlAdYvCrBz14XsuSZWQxCCxCv+z4ydW9Dudd/1HOOgPMRoheDdiGpAdl/TNwZBCDKMiXPoUB5C1WGsQk4svFi83GYBYkuj/UnSC5qQVPtyUBS7cqKtknXyG/I2deDy3IKD47Wh+CtYuaNYXHBIzJ+twdwZ3vkvcpfTKkPcPb9XAHl+z+JUIa6+S7CE5CFrvkQVS6c+YcYTBPPk4JB3vgcLh2WokR294DFJTzxWYa10BAnV3wOnY0EyswfrTelftT8pz2dKQWbSG7B8I9vZ4w2IfUvBR/VdgsVTIQY9RLAMsf0rNHaRF7x2C1bSsm9cQfJny27/Iny6bIl9ReFDbnynDPNu/9cbEsAzTG5XoY172tVd0fYKomubwu8hoUx7URgcwig5YJ2KfWMPWd5kCV9CQXKj8fpjZEzkBBlUiEEPGWEXDuj67SosYDvZwG1owZYYfpClAtRol08Q/6RgvtSlCMifUHuCBQnDQ+KlFtQbVdjC6a6Y8jbo4jE5FZmcWFEmt90oQGL7CHb+us8rQ0MWzgpg6/AHJHCKWiejfr6FhDjH2wVZENNg9Bj0oJWLnLhR+p8VJKJCTD+HiDn+s5tkWnrS2Of6MUu7sNNy+9GIi5doyrTtEwSTd1GVQtBi40Pd976nvF2Q6TTO4KQmwouMCRLKcwjzKn4PQXV0QYw5QvEQ5nU8FYKCcIWETgSeQxgvgwpBZbhCwsfvIU9cIWEjKgQLAyuEPSQK8HNIxGAPiRgDDxHTXq6QsPFUiPQQfmEnPMQLO8pDqEKQ2VRaG8wEz2xqddRDfpX5pc8woJxnShXpIY8eD6E1iUKVwsIED+VYvBZNb+DScEUVgmvlIQMi3sYbh35t+YDTdfrFpVhjm6D/XFsYQ3fa/aO7nrC28pCJQ4hhw4ON0Jp+NO6KRH0W3XETRwf+AZmHYTpMJUgZAAAAAElFTkSuQmCC" InformativeScreenshot="51ccc43f4d3f428a43d677f96525f525.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVDhPY4AB82MXBID4PRD/JwG/h2qHG4BN0X/Tw2f/Ky5b+19q9kIwBrFBYiA5qHYIQNcIwyAN/C2d/5lzCsAYxAaJgeQYmJvb3wPxf3yYpRWhGYZBLjE+eApsAFZN6JjR0gbDAJgL4IoOPHj4Hxk4LVoKl2N3coFrRvcCigGNBw/D+chYMDgMeyAiKwIZADME3SDp5AywBnSMYcCDDx/gBiHLMZpZoIQBDBPtBYoN4PUNgIcBCGM1AB/GZwDBhMRc14TbAGQA8icuLFJSSdgAmCApGKoVAoAC79EV4McF7wGS5hcjN4jnVwAAAABJRU5ErkJggg==" InformativeScreenshot="d33b315ab71e9376e5e2227afc040c74.jpg" Selector="&lt;html app='msedge.exe' title='Advanced UI Automation Input Form' /&gt;" Url="[in_UrlForm]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

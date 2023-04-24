@@ -1,0 +1,143 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/01_OpenAPP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "resuilt&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_CashIn",
+        "in_AppPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/02_Target&Anchor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "d&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_username"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/11_Parallel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "UserInput&Sequence_1",
+        "TaxApplied&Sequence_1",
+        "UserInputAfterTax&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/02_Variable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "UserName&Sequence_1",
+        "status&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "a"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Basic/GetText.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GetText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/03_TableExtraction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DtTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/03_Practice.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "search&Sequence_1",
+        "Description&Sequence_2",
+        "NameMovie&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - ExtractData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_WorkItems&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Browser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/b.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "URL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Browser&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_Browser",
+        "in_pass",
+        "in_user"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - LogIntoACME.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Browser",
+        "in_URL",
+        "in_User",
+        "in_Pass"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
