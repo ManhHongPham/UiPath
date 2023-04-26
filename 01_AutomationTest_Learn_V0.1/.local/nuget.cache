@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bDyb4Q+9Pnlx8VbkyDXF/NQ/Pij8WzpNQgol3zw72hXfUvvKnQvcMhDmPRyH9sLphlhzoUvVBOOcmp3aSPfJEA==",
+  "dgSpecHash": "mkFhfC+hg5bjlkGT8iDpgOtFjUhMUi0I2lKTun+EdpTePtwQ72IeP8QMFZx7MtP+BjgTtl72b4eXfIQFcHWZ+g==",
   "success": true,
   "projectFilePath": "D:\\Project\\02_MBS\\01_PoC_AutomationTest\\Test\\Typical Testcase\\UiPath\\01_AutomationTest_Learn_V0.1\\.local\\",
   "expectedPackageFiles": [
@@ -261,7 +261,7 @@
     "C:\\Users\\BnK\\.nuget\\packages\\uipath\\22.10.49.23\\uipath.22.10.49.23.nupkg.sha512",
     "C:\\Users\\BnK\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
     "C:\\Users\\BnK\\.nuget\\packages\\uipath.connectionclient\\1.4.3-20221214.2\\uipath.connectionclient.1.4.3-20221214.2.nupkg.sha512",
-    "C:\\Users\\BnK\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.excel.activities\\2.20.1\\uipath.excel.activities.2.20.1.nupkg.sha512",
+    "C:\\Users\\BnK\\.nuget\\packages\\uipath.excel.activities\\2.20.1\\uipath.excel.activities.2.20.1.nupkg.sha512",
     "C:\\Users\\BnK\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\uipath.imageprocessing.22.4.1.nupkg.sha512",
     "C:\\Users\\BnK\\.nuget\\packages\\uipath.mail.activities\\1.19.0\\uipath.mail.activities.1.19.0.nupkg.sha512",
     "C:\\Users\\BnK\\.nuget\\packages\\uipath.ocr.activities\\3.11.0\\uipath.ocr.activities.3.11.0.nupkg.sha512",

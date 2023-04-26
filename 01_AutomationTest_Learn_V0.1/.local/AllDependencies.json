@@ -20412,8 +20412,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BnK\\.nuget\\packages\\": {},
-    "C:\\Users\\BnK\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
+    "C:\\Users\\BnK\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
@@ -20421,10 +20420,7 @@
       "projectName": "TestAutomationProject",
       "projectPath": "D:\\Project\\02_MBS\\01_PoC_AutomationTest\\Test\\Typical Testcase\\UiPath\\01_AutomationTest_Learn_V0.1\\.local",
       "packagesPath": "C:\\Users\\BnK\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\02_MBS\\01_PoC_AutomationTest\\Test\\Typical Testcase\\UiPath\\01_AutomationTest_Learn_V0.1\\.local",
-      "fallbackFolders": [
-        "C:\\Users\\BnK\\AppData\\Local\\UiPath\\NugetFallbackFolder"
-      ]
+      "outputPath": "D:\\Project\\02_MBS\\01_PoC_AutomationTest\\Test\\Typical Testcase\\UiPath\\01_AutomationTest_Learn_V0.1\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {

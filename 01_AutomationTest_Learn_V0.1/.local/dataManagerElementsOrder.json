@@ -91,7 +91,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - ExtractData.xaml",
+      "Path": "Utilities/Cource/02_UiAutomation/Practice1/Practice 1 - ExtractData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "dt_WorkItems&Sequence_1"
@@ -113,7 +113,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - Main.xaml",
+      "Path": "Utilities/Cource/02_UiAutomation/Practice1/Practice 1 - Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "Browser&Sequence_1"
@@ -127,15 +127,122 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/02_UiAutomation/Practice 1 - LogIntoACME.xaml",
+      "Path": "Utilities/Cource/02_UiAutomation/Practice1/Practice 1 - LogIntoACME.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "user&Sequence_9",
+        "password&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Browser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice2/02_GetInfor.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "out_Browser",
+        "out_Email",
+        "out_BirthDate",
+        "out_Phone",
+        "out_Name",
         "in_URL",
-        "in_User",
-        "in_Pass"
+        "out_dtEmployee"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice2/02_NaviageTab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "UrlCompare&Sequence_1",
+        "SubUrl&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice2/02_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Home&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Username",
+        "in_Password",
+        "in_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice2/Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Email&Flowchart_1",
+        "Datebirth&Flowchart_1",
+        "Phone&Flowchart_1",
+        "Name&Flowchart_1",
+        "dtEmployee&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_UrlForm",
+        "in_Password",
+        "in_UserName",
+        "in_Url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/02_UiAutomation/Practice2/02_SubmitForm.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Email&Sequence_1",
+        "Birthdate&Sequence_1",
+        "Phone&Sequence_1",
+        "Name&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Email",
+        "in_BirthDate",
+        "in_Phone",
+        "in_Name",
+        "in_dtEmployee",
+        "in_UrlForm"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/03_DataTable/01_Build and merge.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "BorrowedBookText&Sequence_1",
+        "BorrowBooks&Sequence_1",
+        "User&Sequence_1",
+        "OverBook&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/03_DataTable/02_ExcelFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Row&Sequence_1",
+        "FiltterData&Sequence_1",
+        "OutputDT2&Sequence_1",
+        "OutputDT1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
