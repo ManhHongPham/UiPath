@@ -245,6 +245,16 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/03_DataTable/03_ConsolidateExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "VLookup_Value&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

@@ -1,0 +1,9 @@
+﻿Calculate the sum in two Excel files
+
+Suppose we need to calculate the sum of the values from two different columns in an Excel file in three way and store the value in the third column.
+
+Create a workflow that adds the values on column A with values on column B and writes them in column C in different ways:  
+
+Keeps the Excel open and writes the results in real-time, row by row so you can see the changes. 
+Keeps the Excel closed, set the column values in the memory Data Table and adds all the tables to a new Excel file at once, in the end. 
+Calculates the sum by using Excel formulas in the original file. 
