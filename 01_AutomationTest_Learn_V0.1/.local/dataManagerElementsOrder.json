@@ -255,6 +255,60 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/03_DataTable/04_Practice/01_CaculateExcel_Keeps the Excel open.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ValueC&Sequence_5",
+        "ValueB&Sequence_5",
+        "ValueA&Sequence_5",
+        "RowIndex&Sequence_5",
+        "dt_InputTable&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/03_DataTable/04_Practice/Sum A.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_InputTable&Sequence_2",
+        "RowIndex&Sequence_2",
+        "ValueA&Sequence_1",
+        "ValueB&Sequence_1",
+        "ValueC&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Basic/A.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FinalValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/01_Open.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/02_log.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
