@@ -309,6 +309,92 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence4.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/Sequence5.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/05_DataManipulation/01_ExtractEmail_StringMethod.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TemporaryIndex&Sequence_3",
+        "EmailAddressPart2&Sequence_3",
+        "EmailAddressPart1&Sequence_3",
+        "InputData&Sequence_1",
+        "IndexTextToFind&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/05_DataManipulation/02_ExtractData_Regex.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FoundEmailMatches&Sequence_1",
+        "InputData&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/05_DataManipulation/03_Replace Placeholders with RegEx.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "day_of_week&Sequence_1",
+        "last_name&Sequence_1",
+        "first_name&Sequence_1",
+        "InputData&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
