@@ -43,58 +43,59 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Private.Xml</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Excel data consolidate " sap:VirtualizedContainerService.HintSize="784,2723" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -307,7 +308,7 @@
                         <uix:NTypeInto.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="14, 54, 200, 21" DesignTimeScaleFactor="1" FriendlyName="'$H$8'" FullSelectorArgument="&lt;uia cls='NetUIRefedit' name='Where is the data for your table?' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIRefedit' name='Where is the data for your table?' role='Edit Box' automationid='' check:text='$H$8' /&gt;" Guid="5eb8e1a7-56c9-40e6-82b9-58cb7677bf62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAZCAYAAAB90cFuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGiSURBVHhe7ZhLkoIwFACRw3GurLjMFKu5AQvu4Q24QYYHRCImJOBz/HVXdRWi0c3rSqTo+94iYp4Eg7jDSzA/zS8iRgwGA/DuNE2jLsHAxyIDfj6f1SQY+GieFkzXdf9iURTzLwLcjx/MPRAMfAU5wZxOp9EtjgfTGmvq6yHPMnMdwYAmqWBcLKlojgVTV+NAT1a2Hoe8tlVRWtP6g7+6F1zX2daUy/2qHu/JNYAWW8GsY3GGOBCMRDAM+81OkQpma52Lp7WmnD5PMKBJLJhQKL5rCAa+glQwW9c+B4JZjlDVzeC745bvElF43eAQUTl/3r0n1wBaxILxiUXicyiYqyEvjW3He6kdZna9Tl5fvkN2mCkaggFNXiIYOVrV1TTge4Lx18muU5p2eV8eDAx//AkGNHmRYJYdYV8w3joJZLXDSEAEA5rkBJPD/mDkCCVHKuf8GDgZTHQdj5Xh8cSCcbtKzDX7g3ExzEery+tcM9cRDGjyvB0mMNyPkGBAk6cFA/CO+MFoSDDw0RAMwA5kwLWNBoOIYW+CQcS0BIOYbW//ADLahnIts3kmAAAAAElFTkSuQmCC" InformativeScreenshot="a8f08031904ca285ab78cc08b796072f.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="8, 3, 212, 28" FriendlyName="'Create Table'" FullSelectorArgument="&lt;uia automationid='TitleBar' role='title bar' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TitleBar' role='title bar' check:text='Create Table' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAgCAYAAABw4baZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVHhe7Zy9TuswGIa9HJ0zcgm9BOZMXAmCJRMDd8Al0DtgA6kLW1dGhAqUXyF+qu4VAlaE4Dt+7YQ6qZMmObFOkN5HMiWxPzu1/OiLPVQ9PT3J1taWvL+/y8fHh3x+fsrX15cQQpqzvb0tk8lE1P39PQUjpGUg2MPDg6i7uzsKRkjLQDC4pW5vbykYIS0DwW5ubkThDwUjpF0g2NXVlajr62sKRkjLQLCLiwtRl5eXFIyQloFg4/FYFCyjYIS0CwQ7OzujYISEAIKdnp6KQhqjYKQJ0+lUer2eKKVMWVtbk9fX16S2W+D5sOCLMDLoNm0BwUajkajz8/Oagj1KP7ITakrU13f+D8PYeQ6nRH3fEw0lVpF4q0rrSBFHR0eys7NjpDo8PDRzv7u7m9R2Cwj06/cfr2RldU2BYCcnJ6IGg4Gsr69XE+yxL5GexHiYXAN9r+9eN+ZfFnmVWAoWmtXVVSNcV/GJFEIusLm5KQcHB6KwEauWwWzmysjVKhTsJ4PMhQyGLUeXcYUKJRdABjs+Pq4hmMlesV6KRdhFGseRnuikXZLx7KvbPDbzameMRWz+nqYgfpGsIIv9m7u2zXDe5/xVMidY5XEJ2NvbM3OFz59AKlYouUAzwUr3W1aSwkU7jD17I7dNrn2l+JR8bEq+fy1M+h2MRL6x64xLwMrKSmf3Xj66K1iNLJLNAklJs4letPP7BQu7LH6BRSmW9q9BprNdOnW1xiUAc4QDj59AKhc+3f/bpr5gS/dgPkE8Qmbuo88CAYriveQFqdB/5vsUxZMqQC4c2Xcdn1ChJGsgmCbJDBnJ9IK0p4j5BYxrz5E5+lj6mgYK4r04saX9O/1lRHLHrjMuATg57HoGKxMphGTNBANmYTqvT9/7MneRJuTbGjNt5rCxscTfGQZuuO003ngf7thF/ds29hDG1s+7yz175XEJwBxtbGwkV90Ez1gmEOrQpi2aC0YIWQoFIyQgFIyQgFAwQgJCwQgJCAUjJCAUjJCAUDBCAkLBCAkIBSMkIBSMkIAsCDabzeT5+VleXl7Mbyy8vb2xsLA0LN+Cpb/JQcFYWNor+E2O/f19+QvLKVeQTZWrvQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -318,7 +319,7 @@
                         <uix:NCheck.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="14, 78, 131, 16" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'My table has headers'" FullSelectorArgument="&lt;uia cls='NetUICheckbox' name='My table has headers' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUICheckbox' name='My table has headers' role='CheckBox' automationid='' check:fulltext='My table has headers' /&gt;" Guid="c8369ad5-4bc7-4392-adbb-7ac7a6cbb038" InformativeScreenshot="99f52ec8c485b2427ef6929ed9f50bfc.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="8, 3, 212, 28" FriendlyName="'Create Table'" FullSelectorArgument="&lt;uia automationid='TitleBar' role='title bar' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TitleBar' role='title bar' check:text='Create Table' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAgCAYAAABw4baZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVHhe7Zy9TuswGIa9HJ0zcgm9BOZMXAmCJRMDd8Al0DtgA6kLW1dGhAqUXyF+qu4VAlaE4Dt+7YQ6qZMmObFOkN5HMiWxPzu1/OiLPVQ9PT3J1taWvL+/y8fHh3x+fsrX15cQQpqzvb0tk8lE1P39PQUjpGUg2MPDg6i7uzsKRkjLQDC4pW5vbykYIS0DwW5ubkThDwUjpF0g2NXVlajr62sKRkjLQLCLiwtRl5eXFIyQloFg4/FYFCyjYIS0CwQ7OzujYISEAIKdnp6KQhqjYKQJ0+lUer2eKKVMWVtbk9fX16S2W+D5sOCLMDLoNm0BwUajkajz8/Oagj1KP7ITakrU13f+D8PYeQ6nRH3fEw0lVpF4q0rrSBFHR0eys7NjpDo8PDRzv7u7m9R2Cwj06/cfr2RldU2BYCcnJ6IGg4Gsr69XE+yxL5GexHiYXAN9r+9eN+ZfFnmVWAoWmtXVVSNcV/GJFEIusLm5KQcHB6KwEauWwWzmysjVKhTsJ4PMhQyGLUeXcYUKJRdABjs+Pq4hmMlesV6KRdhFGseRnuikXZLx7KvbPDbzameMRWz+nqYgfpGsIIv9m7u2zXDe5/xVMidY5XEJ2NvbM3OFz59AKlYouUAzwUr3W1aSwkU7jD17I7dNrn2l+JR8bEq+fy1M+h2MRL6x64xLwMrKSmf3Xj66K1iNLJLNAklJs4letPP7BQu7LH6BRSmW9q9BprNdOnW1xiUAc4QDj59AKhc+3f/bpr5gS/dgPkE8Qmbuo88CAYriveQFqdB/5vsUxZMqQC4c2Xcdn1ChJGsgmCbJDBnJ9IK0p4j5BYxrz5E5+lj6mgYK4r04saX9O/1lRHLHrjMuATg57HoGKxMphGTNBANmYTqvT9/7MneRJuTbGjNt5rCxscTfGQZuuO003ngf7thF/ds29hDG1s+7yz175XEJwBxtbGwkV90Ez1gmEOrQpi2aC0YIWQoFIyQgFIyQgFAwQgJCwQgJCAUjJCAUjJCAUDBCAkLBCAkIBSMkIBSMkIAsCDabzeT5+VleXl7Mbyy8vb2xsLA0LN+Cpb/JQcFYWNor+E2O/f19+QvLKVeQTZWrvQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -329,7 +330,7 @@
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="55, 97, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;uia cls='NetUIButton' name='OK' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIButton' name='OK' role='Button' automationid='' check:fulltext='OK' /&gt;" Guid="6ae31b63-ca9b-4dcb-8bf7-edf63fca9175" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="724e160001dc21e8555e04759acb47ef.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="8, 3, 212, 28" FriendlyName="'Create Table'" FullSelectorArgument="&lt;uia automationid='TitleBar' role='title bar' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TitleBar' role='title bar' check:text='Create Table' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAgCAYAAABw4baZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVHhe7Zy9TuswGIa9HJ0zcgm9BOZMXAmCJRMDd8Al0DtgA6kLW1dGhAqUXyF+qu4VAlaE4Dt+7YQ6qZMmObFOkN5HMiWxPzu1/OiLPVQ9PT3J1taWvL+/y8fHh3x+fsrX15cQQpqzvb0tk8lE1P39PQUjpGUg2MPDg6i7uzsKRkjLQDC4pW5vbykYIS0DwW5ubkThDwUjpF0g2NXVlajr62sKRkjLQLCLiwtRl5eXFIyQloFg4/FYFCyjYIS0CwQ7OzujYISEAIKdnp6KQhqjYKQJ0+lUer2eKKVMWVtbk9fX16S2W+D5sOCLMDLoNm0BwUajkajz8/Oagj1KP7ITakrU13f+D8PYeQ6nRH3fEw0lVpF4q0rrSBFHR0eys7NjpDo8PDRzv7u7m9R2Cwj06/cfr2RldU2BYCcnJ6IGg4Gsr69XE+yxL5GexHiYXAN9r+9eN+ZfFnmVWAoWmtXVVSNcV/GJFEIusLm5KQcHB6KwEauWwWzmysjVKhTsJ4PMhQyGLUeXcYUKJRdABjs+Pq4hmMlesV6KRdhFGseRnuikXZLx7KvbPDbzameMRWz+nqYgfpGsIIv9m7u2zXDe5/xVMidY5XEJ2NvbM3OFz59AKlYouUAzwUr3W1aSwkU7jD17I7dNrn2l+JR8bEq+fy1M+h2MRL6x64xLwMrKSmf3Xj66K1iNLJLNAklJs4letPP7BQu7LH6BRSmW9q9BprNdOnW1xiUAc4QDj59AKhc+3f/bpr5gS/dgPkE8Qmbuo88CAYriveQFqdB/5vsUxZMqQC4c2Xcdn1ChJGsgmCbJDBnJ9IK0p4j5BYxrz5E5+lj6mgYK4r04saX9O/1lRHLHrjMuATg57HoGKxMphGTNBANmYTqvT9/7MneRJuTbGjNt5rCxscTfGQZuuO003ngf7thF/ds29hDG1s+7yz175XEJwBxtbGwkV90Ez1gmEOrQpi2aC0YIWQoFIyQgFIyQgFAwQgJCwQgJCAUjJCAUjJCAUDBCAkLBCAkIBSMkIBSMkIAsCDabzeT5+VleXl7Mbyy8vb2xsLA0LN+Cpb/JQcFYWNor+E2O/f19+QvLKVeQTZWrvQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>

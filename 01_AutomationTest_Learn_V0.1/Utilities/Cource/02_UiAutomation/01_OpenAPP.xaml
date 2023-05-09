@@ -49,52 +49,54 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="_01_OpenAPP" sap:VirtualizedContainerService.HintSize="1112,1598" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -281,7 +283,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="338, 96, 131, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Deposit transaction'" FullSelectorArgument="&lt;ctrl name='Deposit transaction' role='text' /&gt;&lt;ctrl name='Deposit transaction' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Deposit transaction' role='text' /&gt;&lt;ctrl name='Deposit transaction' role='text' automationid='' check:text='Deposit transaction' /&gt;" Guid="a996058f-c337-471c-a9f9-d64761b635f2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAUCAYAAACnFS7nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKFSURBVGhD7ZfbdYQwDEQpio4oh1qohF62BQeDx9YTTEJOdnP0cT8A2xqNBjYZXq9XCgKLCEfgEuEIXCIcgUuEI3Ah4VjSNAxpMJgWvunPWec0Zm3jnFZ6j14bLNMb9nKbNc3jmOa1XC/TMadpEet+Tlc4MuO8so1vhRUWQQ5G7uOzw5GDkfsg4fhFjHBMaSELajKZIIgsyDe43JvLQDIqXFgHZPJr3YJTY5XnGMYhGJVcq54xpan0cmjUL0kLFBnOTPSJUMp6vHfhnXou92Mezj7ry3HqbV8PmetwbPC3TovcgQA1rEY12VsDgd5zWeOJcFTyPqe3kwEBDHidR/M5eldadppm+3mu3xmOK287egBd4UDD+2YUJ2k8GioNVnGt4WpY2QMDmpgmeDfRqMHAcxkmI/0ANXVAdZga0IU1TacKQ9GK61rnAqaramoz4Lqlng0RjktvO3oA98MhP/cE1iArVM7eh+fUKeceglsDoDW78WQ4nD1YfyDDQYYj+8W12supAynsuqyfCMZVOO54e9JD4f7Pykk49uKm6TQcEHfWgNgHvDCYNTl94ZDGXV1vOMZKn9CX1GF6++1w9Hjb38N1OLAR9z0zQF3fisvPFgxpQYBgMjyGaAg1ng6HugdP0Eu/sRV2pvRY9I21hnfuYEWgrr3t78EIh41VjCPCY6AGI8FQxFunnjPD9XlWwGBaPUeekXG194eD1SEc/vkeQ7O9X4dpJ9eUXxuvh9rnw+HQZsuAGIU2MY/+K0u/aKQGBktNtcLB6nnh2GB/CxDz3TcX5xD9asC0N9oX1eHuJ7XkfqKP1aC9ymffC8dDOKYHn0eEI3CJcAQuz4cj+DdEOAKHV/oCO/TRhuOBsSEAAAAASUVORK5CYII=" InformativeScreenshot="36da9b681ae45b0bc862288deecedff8.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="270, 41, 86, 36" ElementType="Text" FriendlyName="'UiPath'" FullSelectorArgument="&lt;ctrl automationid='MainTitle' /&gt;&lt;ctrl name='UiPath' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MainTitle' /&gt;&lt;ctrl name='UiPath' role='text' automationid='' check:text='UiPath' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAoCAYAAAB+Qu3IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVGhD7ZlbTxtHGIb7X6BKelQPSqWmQlUuWvWivYiqXlRVq+aqUckVB5vQ0rR1EU1IaKSQtoREFlUMDUpDgo2ND9hQg7GxcbETwMZxOTjE4NNfeDvrXbO79qwPlF3Z0V48N/6+mZ15PJr5Zve5XC4HFflRRSuEKlohVNEKoYpWCFW0QqiiqyBpcaGpbRJNmjkYKfFqkF90MoKBPiOaOqfw5UScnlPnyCA6gwXDdL7TYxd9WBbFpDkYSIcNv4XEsT3bLF5iYtQ++efRMeGtC3acNQTgjmUE7ZSlIUTzK9qCs8biFV1JtACm/YMYUqL2ytAYossiEK2ZxWhkG6sF1h/DYfPjynUrXu/gZLeboZ3ZpfRzSLK7WDB70NE/jZZbYXoO4RkTLT2Jp14PPuRkN/e4YU3R82omHUW/ju335WFVNCGD5Ts2No+sat08LecQqKJLSXkX8B6T12bEmckdak7NPFOiDyZjxMd3yxyGlUT7PfiAyaP0k4ysYXRsDp/qzPx+TsrJlotO9E/H8VSQm88vjFcSI7ROSn5hjHtbMI+7cLrHhGNc/hvf2dF+bxVRiW2tcUQLVnSrJcn9nkVownFQPtIx4tTNEOKCvv6X6MQaLjNVVEkblteu+LBEkd0gogV5omcUfjfho9+9eBBIYCc/yTQ2wyF838sJabeQfZ1Sh9e6dXTO4Nw1E5q77Oh1bCCeJPHsPjZ8/+B84VlkLGcmt0r6aAjRwqrjlV8CeHQQy8Az4cHtcEqUXyAT9eMLrt3JkdXSnFpFE5q/ncVdyuUpGw+itYvNeYGMMVIUr1/RZKXEVlZh+MOBtwv7rsaOoeL+y5FNQD/Atj3e78NKcbxm0UZ8fr90tbKkYdebuXGWLpr6EV2B53ucuBmgr1xpUrgzyLanzqdW0R123HhEz2FImJxsXiOKPt5tQ9t4CEFmPxS1FfMkTm6S9iD0Y25ohlykArGgpZs/tI5EdNlzpHyepOimrr9hFsWkET7gfvGJW63o4is4IZqo/CJpZ3EJrTrpKqBAnYkWLP9OF8Z3xDE6GXjHrGwb2p9Ttejyk6AhPCSZlf+VfhEjlhBcYfJHxZJIHfXWcZSi991uvMMkkzJF66zi1SQ5cEausiuKdtrKJjrzL369xPRLKpGrfoSpF4U6Fp3bD0PDlSniUopOOuTFaaZzIpJ6Isslei+Ir7nn8heYItJxXPuZnUv9iSZlinPEwjYgk/jEsCa6VQnJxB7ylwItqS9pW40Cokv7ZchinUz8RD5HSvQGBnrZ+IuDQWwXxzlkEk3YDUPbzQ6A4dUfHPjxHrf3Rbbgn1+BftSF9zVcTrn3xLJtHZsYusz9yZ1WdE9zNzUSe/I4gtu3bDhBboSnLrBjpIomi8p4w8T2QSqmvrnt/HuRxLIff3r4PPlEEzIbIXxTxWnOfPloM29Kf/mQSzRBeBiWYsJnf0VhKLdHE1L+RUofFV4qSXAo0Xmye/BZ2S8QJ7t46c3aKbz7kwPnSX27VKkEk1E0Q3L9IQav2/jxMW/tLs1ieD5RuergYErEc31T3MspI97UzWA4wMflF61yZKiiFUIVrRCqaIVQRSuEKlohVNEKoYpWCFW0QqiiFUIVrQg5/AcKJRTGUP+2iAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>

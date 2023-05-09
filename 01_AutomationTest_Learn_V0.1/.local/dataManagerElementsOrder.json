@@ -395,6 +395,28 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/05_DataManipulation/04_List.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "country&Sequence_1",
+        "inputdata&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/05_DataManipulation/05_Dictionaries and Integers.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "WinnerCounts&Sequence_1",
+        "datainput&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

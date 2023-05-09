@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="_04_MainCaculate" this:_04_MainCaculate.In_Fist="30" this:_04_MainCaculate.In_Second="22.3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_Fist" Type="InArgument(x:Double)" />
@@ -40,38 +39,41 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="_04_MainCaculate" sap:VirtualizedContainerService.HintSize="400,641" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -86,35 +88,19 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Cource\03_Sum.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Utilities\Cource\01_BasicConcept\03_Sum.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Double" x:Key="out_Sum">
-          <VisualBasicReference x:TypeArguments="x:Double" ExpressionText="Sum" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="in_FisrtValue">
-          <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="In_Fist" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="in_SecondValue">
-          <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="In_Second" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_IOExecutionInFor">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ExecutionInfo" />
-        </InOutArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="out_Sum">[Sum]</OutArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_FisrtValue">[In_Fist]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_SecondValue">[In_Second]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_IOExecutionInFor">[ExecutionInfo]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[ExecutionInfo +&quot;result is&quot; +Sum.ToString]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Cource\03_Sum.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Utilities\Cource\01_BasicConcept\03_Sum.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Double" x:Key="out_Sum">
-          <VisualBasicReference x:TypeArguments="x:Double" ExpressionText="Sum" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="in_FisrtValue">
-          <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Sum" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Double" x:Key="in_SecondValue">
-          <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="In_Second" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_IOExecutionInFor">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ExecutionInfo" />
-        </InOutArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="out_Sum">[Sum]</OutArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_FisrtValue">[Sum]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="in_SecondValue">[In_Second]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_IOExecutionInFor">[ExecutionInfo]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[ExecutionInfo +&quot;result is&quot; +Sum.ToString]" />

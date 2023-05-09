@@ -44,48 +44,49 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="634,637" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -157,24 +158,12 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Cource\02_UiAutomation\Practice2\2_GetInfor.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Utilities\Cource\02_UiAutomation\Practice2\02_GetInfor.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtEmployee">
-                    <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtEmployee" />
-                  </OutArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_URL">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Url" />
-                  </InArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_Name">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Name" />
-                  </OutArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_Phone">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Phone" />
-                  </OutArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_BirthDate">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Datebirth" />
-                  </OutArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_Email">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Email" />
-                  </OutArgument>
+                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtEmployee">[dtEmployee]</OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_URL">[in_Url]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Name">[Name]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Phone">[Phone]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_BirthDate">[Datebirth]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_Email">[Email]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -192,24 +181,12 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Cource\02_UiAutomation\Practice2\02_SubmitForm.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilities\Cource\02_UiAutomation\Practice2\02_SubmitForm.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_UrlForm">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_UrlForm" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtEmployee">
-                        <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtEmployee" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Name">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Name" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Phone">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Phone" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_BirthDate">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Datebirth" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Email">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_UrlForm">[in_UrlForm]</InArgument>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtEmployee">[dtEmployee]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Name">[Name]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Phone">[Phone]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_BirthDate">[Datebirth]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Email">[Email]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
