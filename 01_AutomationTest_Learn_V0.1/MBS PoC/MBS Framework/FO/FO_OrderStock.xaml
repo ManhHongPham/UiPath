@@ -1,0 +1,273 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BuyStock" this:BuyStock.in_NameStock="MBS" this:BuyStock.in_VolumeStock="50" this:BuyStock.in_PriceStock="15" this:BuyStock.in_FOPath="E:\V58\V58\mbs test.exe" this:BuyStock.in_TypeOrder="Buy" this:BuyStock.in_Account="1515121" this:BuyStock.in_OT="02" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_NameStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_VolumeStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_PriceStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_FOPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_TypeOrder" Type="InArgument(x:String)" />
+    <x:Property Name="in_Account" Type="InArgument(x:String)" />
+    <x:Property Name="in_OT" Type="InArgument(x:String)" />
+    <x:Property Name="out_NumberOrderFO" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>762,2509</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>BuyStock_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="72">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BuyStock" sap:VirtualizedContainerService.HintSize="642,2444" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="isMessOrder" />
+      <Variable x:TypeArguments="x:Boolean" Name="isCheck" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Mua cổ phiếu &quot; + in_NameStock]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: View Order Confirm" sap:VirtualizedContainerService.HintSize="580,1968" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,1678" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="ElementExist" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[in_TypeOrder.trim.tolower = &quot;buy&quot;]" sap:VirtualizedContainerService.HintSize="484,220" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Ctrl + B" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][d(ctrl)]b[u(ctrl)][u(hk)]" Version="V3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NKeyboardShortcuts>
+              </If.Then>
+              <If.Else>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Ctrl + S" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NKeyboardShortcuts>
+              </If.Else>
+            </If>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Account" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_Account + &quot;[k(tab)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51386394-929a-42a6-933d-483367c1558e" InformativeScreenshot="48d533ada645b2ec47bb89c1ea1f6926" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='OrderEntry row 1' role='row' /&gt;&lt;ctrl name='Text area' role='editable text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Name Stock" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" Text="[in_NameStock + &quot;[k(tab)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51386394-929a-42a6-933d-483367c1558e" InformativeScreenshot="8692a230a4c114a94a705fcac3701281" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='OrderEntry row 1' role='row' /&gt;&lt;ctrl name='STOCK' role='cell' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type OT" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="True" Text="[in_OT + &quot;[k(tab)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51386394-929a-42a6-933d-483367c1558e" InformativeScreenshot="69655f73bae46ebb73aaac6184ef20ae" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='OrderEntry row 1' role='row' /&gt;&lt;ctrl name='Text area' role='editable text' /&gt;&lt;ctrl name='A single text character' role='editable text' /&gt;" TimeoutMS="3000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Price" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="True" Text="[in_PriceStock + &quot;[k(tab)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51386394-929a-42a6-933d-483367c1558e" InformativeScreenshot="15f6c8825b8a76478483d95667647c5e" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' idx='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Volume" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="True" Text="[in_VolumeStock + &quot;[k(tab)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51386394-929a-42a6-933d-483367c1558e" InformativeScreenshot="0f95e7ec161bbf4d5df6e4d8b946cf66" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='OrderEntry row 1' role='row' /&gt;&lt;ctrl name='Text area' role='editable text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DelayBefore="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="484,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+            <ui:GetVisibleText FormattedText="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get Visible Text 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="GetVisibleText_1">
+              <ui:GetVisibleText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91db7ff7-0e91-4c1e-8055-185abbcbde26" InformativeScreenshot="e95afbdaa295fb2dfb421698714bfdbb" Selector="&lt;wnd ctrlname='ultraPanel2' idx='5' /&gt;&lt;wnd ctrlname='tabOrderEntry' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='orderEntryPanel1' /&gt;&lt;wnd ctrlname='lblInfo' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetVisibleText.Target>
+              <ui:GetVisibleText.Text>
+                <OutArgument x:TypeArguments="x:String">[out_NumberOrderFO]</OutArgument>
+              </ui:GetVisibleText.Text>
+            </ui:GetVisibleText>
+            <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_NumberOrderFO]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Regex.Match(out_NumberOrderFO,"(Order Number : )(.*)").ToString.Trim.Replace("Order Number : ","")]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 23, 1920, 963" ContentHash="r_d3WbuGiUyNVaInI2Jqjg" FilePath="[in_FOPath]" IconBase64="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" InformativeScreenshot="3c713ee363af4787218ba117e4a0a47c.png" Selector="&lt;wnd app='mbs*' ctrlname='frmMain' /&gt;&lt;wnd ctrlname='ViewOrderConfirmTScreen' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="FO_đặt lệnh" ContinueOnFailure="False" DisplayName="Verify Mua Stock" Expression="[out_NumberOrderFO IsNot Nothing]" sap:VirtualizedContainerService.HintSize="580,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" OutputMessageFormat="[If(out_NumberOrderFO IsNot Nothing,  &quot;Đặt lệnh &quot; + in_NameStock + &quot; thành công&quot;, &quot;Đặt lệnh &quot; + in_NameStock + &quot; thất bại&quot; )]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uta:VerifyExpression>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Khởi tạo mua Stock thành công&quot; + in_NameStock]" />
+  </Sequence>
+</Activity>

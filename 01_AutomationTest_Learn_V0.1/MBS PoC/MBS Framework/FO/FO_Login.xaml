@@ -1,0 +1,188 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FO_Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FOPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_Password" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>984.8,1776.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>FO_Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="68">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FO_Login" sap:VirtualizedContainerService.HintSize="995.2,1712" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="myHome" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="932.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Mở ứng dụng FO&quot;]" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process 'MBS Test.exe'" sap:VirtualizedContainerService.HintSize="932.8,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="MBS Test.exe">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:KillProcess>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: MBS Front Office 2011 R2.10015.1016 - VIP - Intranet Version [10.91.2.228]" sap:VirtualizedContainerService.HintSize="932.8,1292.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Always" ScopeGuid="6986734d-ac90-4a59-9a13-60d3fdd58369" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NCheckState DisplayName="Check App State 'Input User Name" sap:VirtualizedContainerService.HintSize="899.2,1001.6" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="6986734d-ac90-4a59-9a13-60d3fdd58369" Timeout="10" Version="V3">
+            <uix:NCheckState.IfExists>
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="596.8,783.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="isPageHome" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Input User" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="6986734d-ac90-4a59-9a13-60d3fdd58369" Text="[in_Username]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="492, 335, 144, 13" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='ultraPanel*' /&gt;&lt;wnd ctrlname='txtUserName' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ultraPanel1' /&gt;&lt;wnd ctrlname='txtUserName' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="bdcac3cb-c55f-473b-b622-aae8b7ae5813" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAARCAYAAAA7QYW/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVGhD7dIxEQAgDAAx/FvhmCqwmPgx0ZCzELlvVigyQpESipRQpIQiJRQpoUgJRUooUkKREoqUUKSEIiUUKaFICUXqvtkP5NQa6KJwLIMAAAAASUVORK5CYII=" InformativeScreenshot="9916ee0f17a3bcea0c403fde1655723e.png" ScopeSelectorArgument="&lt;wnd app='mbs test.exe' ctrlname='frmMain' /&gt;&lt;wnd ctrlname='frmLogin' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Input Pass" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534.4,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="6986734d-ac90-4a59-9a13-60d3fdd58369" Text="[in_Password]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="486, 360, 152, 21" DesignTimeScaleFactor="1" FriendlyName="'WindowsForms10.Window.8…'" FullSelectorArgument="&lt;wnd ctrlname='ultraPanel*' /&gt;&lt;wnd ctrlname='txtPassword' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ultraPanel1' /&gt;&lt;wnd ctrlname='txtPassword' /&gt;" Guid="4d68fa99-3c88-477c-8485-3386ca4a5667" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAAZCAYAAADExUcmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVGhD7dKhDYBAAMBAFsGyPEGxAns9DgPIr7pLukGXa1uHVGU4pT3D7ccpTetzOJjBcKQMR8pwpAxHynCkDEfKcKQMR8pwpAxHynCkDEfKcKQMR8pwpAxHynCkDEfqdzhpVq/hpCLDKWwdN7CvBpfwPQbuAAAAAElFTkSuQmCC" InformativeScreenshot="8a5cc4960e54962fcec33689b6d55f45.png" ScopeSelectorArgument="&lt;wnd app='mbs test.exe' ctrlname='frmMain' /&gt;&lt;wnd ctrlname='frmLogin' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="534.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Nhập thông tin đăng nhập thành công&quot;]" />
+                <uix:NClick ClickType="Single" DisplayName="Click '&amp;Login'" sap:VirtualizedContainerService.HintSize="534,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6986734d-ac90-4a59-9a13-60d3fdd58369" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="434, 435, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'&amp;Login'" FullSelectorArgument="&lt;wnd ctrlname='ultraPane*' /&gt;&lt;wnd ctrlname='btnOK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ultraPanel1' /&gt;&lt;wnd ctrlname='btnOK' check:text='&amp;amp;Login' /&gt;" Guid="59153062-e10c-4417-a89f-7a8c3b63992b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGFSURBVGhD7Zi9ToRAEIB5kWt9AUt7Xmgfw8RWg6WJ9dWQjTGRTiNPQAmBR4CQcQduz/07VDgC3k7xFcfMzoXvZm6TCd6udkBMg+TNgOTNwJKX3lzDx/MTfKYpZFlGCN4fH3ovpitNHiagtLIsoW1b6LrOe9BDVVW9F1OgJg8N13XtLOI7RVH0E6n60uRhizZN4zzsO+gFu0/1ZclzHSQG0I/qi+T9gRXkcWBBAEHAgDvjE+BM1BM1wwhyV3whLkPeSpC8GWxOXh6FwwhKGD/GOFOeH2BcxMyxlZ9VFhjpbckzJEhZYZQbsRyicIiNywshyr/r9Lnq981kU/I0WfhMShDdJztSxjQhp+QZP4K38kwBJM+MnXhpe2xlDW/lGRxe9KwXxuXJOwfywhguBHfO8vwbeVZHCo7/jSsxKg+3BrRVcYNeRuXhvgr3Vq7DvoMLUdx3qr40eXKTjInUgQPoARvqx00yggkvd7eQJAnEcUzs9/Aa3VviEEse8XtI3gxI3mR28AW6B5eL7F99fwAAAABJRU5ErkJggg==" InformativeScreenshot="6a14aad529934aa56d49cea66c5632e7.png" ScopeSelectorArgument="&lt;wnd app='mbs test.exe' ctrlname='frmMain' /&gt;&lt;wnd ctrlname='frmLogin' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NCheckState DisplayName="Check App State 'ORDER#'" Exists="[isPageHome]" sap:VirtualizedContainerService.HintSize="534,52" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="6986734d-ac90-4a59-9a13-60d3fdd58369" Timeout="10" Version="V3">
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="9, 56, 101, 21" DesignTimeScaleFactor="1" FriendlyName="'ORDER#'" FullSelectorArgument="&lt;wnd ctrlname='ViewOrderConfirmTScreen' /&gt;&lt;wnd ctrlname='tabMain' /&gt;&lt;wnd ctrlname='ultraTabPageControl4' /&gt;&lt;wnd ctrlname='ctlOrderConfirm' /&gt;&lt;wnd ctrlname='tabOrderConfirm' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='Column Headers' role='grouping' /&gt;&lt;ctrl name='ORDER#' role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ViewOrderConfirmTScreen' /&gt;&lt;wnd ctrlname='tabMain' /&gt;&lt;wnd ctrlname='ultraTabPageControl4' /&gt;&lt;wnd ctrlname='ctlOrderConfirm' /&gt;&lt;wnd ctrlname='tabOrderConfirm' /&gt;&lt;wnd ctrlname='ultraTabPageControl1' /&gt;&lt;wnd ctrlname='grdOrderConfirm' /&gt;&lt;ctrl name='Column Headers' role='grouping' /&gt;&lt;ctrl name='ORDER#' role='column header' automationid='' check:text='ORDER#' /&gt;" Guid="a99c095a-a5b5-443f-a919-0ddd2616feb9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAZCAYAAAAyoAD7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMUSURBVGhD7ZPPS1RRFMf9F4JatAhaBC76sQhaCC1aFAguhFkMDBQSgkgQBC0CkRTDksF1hoQSjfirCGLEzAZEnclB54czYhmBMDn+mNmluT3d8947773zfPOczZW7uBc+M997zrnnvHe/Mw24QCz80iiL+ESTrr/WqAqZ9DFZ1SjE+WshWzOTQr15jSKQSaiZSa3PsxpFIJNQM5NaulY1ikAmoWYmNT9b0SgCmYSamXT3aVKjCGQSambSnSdLZ0Jn4hhHOqtSgk47/xNWrDBfVRg8paacyFj5oD7HMD1Y7xwkA9MVq/dgCcr2ebmQSaiZSbcfL0gnWsRp/2AqSrFVmBKXgJcTNfab5uUVN+0zJ2M+NbEqRmDn22rtGkY9c5zYSkxoYwY9p1zIJNTMpKZHCbm82oYdMWtnPh0Q34Dv+EDFDVdNGiYPROxgG9qNvV9NAgaMH0AFBgJqHE6bY2mfdeL5JUAmoWYm3er4KpWHc0fGS6ZGvbkCpDBRKHi0X95vb2L2P4KJ/to1DvXMEYwarsHLjhRM7AP8mUu56uVBJqFmJt1sn5VK25dDMekQxvu8uWUYFxcA+7+hrT1vXpR3redd9VYNi3n71+hjzAjIe3r2r1PMrE+NODmZkEmomUk32mak8mAWLxEg+daby0ESE7mcR8/AixxuAEqzizXqnT5m/0MY66ld43DanEUYwx+Oz+LPIgcyCTUz6er9z3Lp/gUlfMmZhYB4BpbxgXIZK2/txeXHuumMt8akz7joXegLqHGof87ysNDDu0JRb/mQSaiZSY2RT9LpzeI08eJvKLZmXU4Zet377Jp9JhI3/4FO7GRNY9eWaXQ8UbuGUccco6cwrcvK7W1BxD4vFzIJNTPpSvjDmRCO/zXuwl57PyBs59OwhLFs2nVmHt7vGZWwNOSq8axSfN51xr8GF+sRNGeoLFQZeqw47y8XMgk1M+lyaFKjCGQSambSpdZxjSKQSaiZSRdbYhpFIJNQM5MuNL/TKAKZhJqZdO7eiEYRyCTUtkkY1KiJbRJ+aZRFfGqTFKYB/gMfP0dhG+9ZwAAAAABJRU5ErkJggg==" InformativeScreenshot="c075b240fe9688f486edb0c92625b3ba.png" ScopeSelectorArgument="&lt;wnd app='mbs test.exe' ctrlname='frmMain' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+                <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="FO_Đăng nhập" ContinueOnFailure="False" DisplayName="Verify Expression" Expression="[isPageHome]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" OutputMessageFormat="[If(isPageHome, &quot;Đăng nhập vào FO thành công&quot;, &quot;Đăng nhập vào FO thất bại&quot;)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
+              </Sequence>
+            </uix:NCheckState.IfExists>
+            <uix:NCheckState.IfNotExists>
+              <Throw DisplayName="Throw Not Found Input user" Exception="[new system.Exception(&quot;not found input user name\&quot;)]" sap:VirtualizedContainerService.HintSize="249.6,24.8" sap2010:WorkflowViewState.IdRef="Throw_2" />
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="492, 335, 144, 13" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='ultraPanel1' /&gt;&lt;wnd ctrlname='txtUserName' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='ultraPanel1' /&gt;&lt;wnd ctrlname='txtUserName' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="b1b0c24c-cd1d-483a-b714-62d269fa898a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAARCAYAAAA7QYW/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVGhD7dIxEQAgDAAx/FvhmCqwmPgx0ZCzELlvVigyQpESipRQpIQiJRQpoUgJRUooUkKREoqUUKSEIiUUKaFICUXqvtkP5NQa6KJwLIMAAAAASUVORK5CYII=" InformativeScreenshot="b89a958e54974c2a85489e4ed8418640.png" ScopeSelectorArgument="&lt;wnd app='mbs test.exe' ctrlname='frmMain' /&gt;&lt;wnd ctrlname='frmLogin' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+            </uix:NCheckState.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NCheckState>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" FilePath="[in_FOPath]" IconBase64="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" InformativeScreenshot="a6b7fac1e7d681ff21421e8c1ed31dea.png" Selector="&lt;wnd app='mbs*' ctrlname='frmMain' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

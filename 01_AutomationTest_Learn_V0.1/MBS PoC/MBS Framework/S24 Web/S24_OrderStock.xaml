@@ -1,0 +1,212 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BuyStock" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_NameStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_S24_Url" Type="InArgument(x:String)" />
+    <x:Property Name="in_VolumeStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_PriceStock" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1159,2108</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>BuyStock_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BuyStock" sap:VirtualizedContainerService.HintSize="596,2043" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="isFormOtp" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="534,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Buy Stock &quot; + in_NameStock]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="534,1279" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="Never" ScopeGuid="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1112" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="ElementExist" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Ma CK" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Text="[in_NameStock + &quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="1518, 247, 276, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='input-ticker-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='input-ticker-search' tag='INPUT' type='' class='input-ticker-search input' aaname='' /&gt;" Guid="36d2473d-b9d5-480c-a80e-68cd4cd32065" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAAVCAYAAACdZ/HmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOGSURBVHhe7drfa9pQFAdwKaF5kCEsIw9lyOao4EMeHNtIoTIfLJMhc9SOUkoJ0xGKjIwg+fu/O0mMyY3XNDI79uNb+ICexFz7cL89J2lDfkBE9Ei0RSKiQ9AWiYgOQVskIjoEbfHvd6SpEdHvpi0+wIK7iDA91R1bO2rBuVwiWs7gtDTHH0H7QtYLPbi2geYbD7evm9rziOi3KRe6mEYRgo8dGFv1Odyn8euHA8Z652H5qYvW6RTLuwHsY/15h9PBxB/h5NiGexdKsE3QNXXnCQm/3thDEEaI5HcN728xfJWHUfeT1OW7558xpRYguHTQYmdEtI9yIQ2YKAoweWWU6vUD5s+1Dovrt+vQk27nxRDeysfQTs9RA8aAfe4h9FxYDBeifZULacB4N7eIvk/Q2XQemoA572N2L91C3AV8HaGTdQxJhzBHuIqDKsTyqr/ZnPHm9T+P88/dT/Uj1FMX8+gao7MZlnGnsQoxv+jA7o0x/7F93ao1ddd1St1N/L2CD+3N6yxgrLM4XIY42dUNEVGVciENmOlpE/2b4qi0HTCRbLx2U94bNgbyfn5mJdew3/tyTMYiY/tYsnkXo/RzR030pJuI7t6iuVl/LQmCALPXrWR9wx7Ie/k+nx004+setzHyI8yctMuqWlMhI1u0kG6kXC/IAsaUc4Pv092jFhE9pFzIAkZemw5mq2xU0nQwhRHJOptv/uobZhNm4Z6LdS6bf30s3rzKxj+WNaJb9OPAyWqxJGBkc29qFgbf1DWL16pasyj5nnUCZuHh+ss1vCUDhugXlAuFgJH3pjNbj0r1A6ZhnsC98tfjytqugFGCq0ATMOU1lWtVrKmo28EsBsmIlY5I1ecT0U7lghow8U1R5yoelSbSadQJGAO9ywj+uJuOMsoxTcDs0cHsDpjqNRX2EP4e92AajXhUDOEpoUhENZUL5YARyagUdwV1Aia9dzMf2DCkAzCetDH08g2bbN7s3k12D+amv+MeTN2AqV5TlT9ytpSnSHkXpQaMMHuYBoGsbeY1IqqjXNAEjEhGpboj0rPC06X7KYZjOXblJDdr482rPEVajNHb+RRpjxGpYs3s/I3y/8H4M7jP8/DYChiR3PBdeXCf5TUiepC2+GiUUCCif522eAAdjMMQ45dqnQFD9F/RFg+i1W5v/Ws9A4bov6ItEhEdgrZIRHQI2iIR0S9q4CdcigEawQjKrAAAAABJRU5ErkJggg==" InformativeScreenshot="687b6070c943959e941c86334d7c6375.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Gia CK" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Text="[in_PriceStock]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="1655, 469, 155, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='input-price-place-order' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='input-price-place-order' tag='INPUT' type='' class='input-price-place-order input' aaname='' /&gt;" Guid="2c5bc36d-e9ff-467f-b336-5b1976d545d7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAVCAYAAABYMDxeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALoSURBVGhD7ZnvS9tAGMdLKQsSJMyWvAhS/IGFIhVacESYrAVlYcjyIkKRIoFshFFKJJT8/V/vrklM0yc1btiReMIHzPd87l7003vuYoP9QCL5T5ChRLILyFAi2QVkKJHsAjKUSHYBGX4MDkx4kY0eNRajHI7hhiHciQGFGP83WtAMHWozl3dMtqYP61hZz+sHGVYfIVYE12wTeSzca/Lt9XDnuzB1HeajD/tco//ub9kbYLqcY2xkcw3DqY+7s9qLxyHD6hPLFy2ZPAf5vKR8kveGDKuPEMvH7CFA5Jpor+Xr8l2PHMxDLmoI7/Ykba/KoQnnT4iIS/zk4SZpg6JuCuvWQ7hc1c2+FbdlrW/B4/NHIeb3FuzfEewzPtaDHXnpl6NwvfpChtVHCMI+2E4X1iLTfjfkY2OTrjh3tfTrVQ2X4VMfzjKA3VdFnXpuI1iyOn4+E3UBnJGGFhvjdS77W+uYjfF5s+xfwmVfAus0nqfP5mFrbsi3bb3sfPWCDKtPIh//YI0x/KT9bsgX/y5ow/wVi9FsQVEVIZcYa/ZfRNmoa8CYzBF876bPCZrpInoYQk0zLhwh37b10traQYbVJysfezYm/qr9lpWPPfN26S7iNigolq995SH62Uufi/MC+dhY4Xppbe0gw+qTk6/RNDD2WYv9YZeTT+e75QyXnVY8lhGFkK9o51NHM0T3g5cdrUi+beultbWDDKtPXj4Ob79iRykh35GFILAx2GcysJbYvnDYWS0rHzvzXeTOfEfJPBn2h5gtS5z5tq2Xn7M+kGH1oeRjiPZbRr6GgpO12+yYXQjid3KiLnvbnWN6VXzbVU9v4D1x6fltd8pqCfm2rUfMWRPIULKNDWlfYe3GyoXzcd3JZh8WMpTEaF9chI+X0LL5W+Tj/8WYOxh85me5FvSv7Pa7sNCt9yuUspChJEHR0dVzL3vfuPOJl8yi7UYIfQdDueslkKFEsgvIUCLZBWQokbwzDTwDLbbmlZCvCr8AAAAASUVORK5CYII=" InformativeScreenshot="7cbdc25fae587a8b1c3ee901c03648ad.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into KL CK" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Text="[in_VolumeStock]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="1655, 509, 155, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='input-volume-place-order' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='input-volume-place-order' tag='INPUT' type='' class='input-volume-place-order input' aaname='' /&gt;" Guid="12a1c26a-4ade-4a5e-bc96-6ad542b787fe" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAVCAYAAABYMDxeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVGhD7ZlRi9pAFEaDBELxQXaVPIQi2y0V8uBDC1siVIjQ0rAUXVaLFJFACnkIkhJKfv/Xm0miE52trtgUslc4yHx3zARymDvZ1egDhvlPKEOGqQNlyDB1oAwZpg6UIcPUgTJ8OVw7CNIZBqpaiWHB9RMkaxeWoagz56IMm4EQK4XvdBV5IdxR+QwM7kP4IxPmyEf4YKOjnPcXxBoBnGsp6znwEx/ua4PGA8zoPmfvpPrLQBk2g0K+9LdfffDPku8C7MvXtjHbxCRbJl6WsXzNQzz0EKsfMVLfQbeSV+Ubf5gjSjJREwRfbmGUc6nlOosIiZBYrnXh/Eyx9D4j+EU1qierJ9qyLJ9BopF482FHmsPyNY/yoff68DZS+z2Qj2qTPtotDbo53omi6bAfU8RTW9TEjhWXkuTyxYv36Og01k2MfRp7t7v1S7b3Qb+hs6M/2jsGsHwNRN5xLBdh2X4P5JPbbi5VKYL+qg0jk6uo2w8pAiFPdZ6A1ohiD/1yXCLWiOCvl1gu6ZvlK1GGzUCWj8bWJMzb7zPk0zo2vHWct92CJ+U7uJac0xnPpjNe0Xa/vdWlOSxf89iTT2tZcENqsfezE+UzxfzVxy70rO1SfTA9d+eT7uPGQ7yhNbfnQ5aveew/9Iys/Yod7BT56KwY0441bEOnmt4bYk5nR1m++HFYPfN97RfXkVDcR/dTkO/CQmqWr3mo5CNE+z1JPg3Gm+rbrLtIEU2s7Tz5bTf67hx/2y2zFv0+k3U6oLfnXL6yrW+hWuU6zUMZMkepSsqchTJkZK7uxH8j7q7knOW7AMqQqWDAvDF3f3gWsHwXQBkyTB0oQ4apA2XIMP8YDX8A3EnIk+/hWEsAAAAASUVORK5CYII=" InformativeScreenshot="6f2486607045afebfa08bd77b8ad5dd4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='VNIndex 1018.30 ▼ -0.47%' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'ĐẶT LỆNH MUA'" sap:VirtualizedContainerService.HintSize="388,194" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="1477, 991, 422, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'ĐẶT LỆNH MUA'" FullSelectorArgument="&lt;webctrl parentid='place-order-container' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='place-order-container' tag='BUTTON' type='' class='styles__Button-sc-1kr1nak-0 iVLZKB btn-place-order btn-place-order-buy' aaname='ĐẶT LỆNH MUA ' check:innerText='ĐẶT LỆNH MUA' /&gt;" Guid="319d22bd-0627-405a-a32b-d30c08e4c339" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaoAAAAkCAYAAADYQn7qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASzSURBVHhe7du/TxRpGMBx4l+AhYmJjVt57SXm7CysjH+CrSWNiaWlncGOcrsLFdHGUFCQkEDQyxEoICAa19scx7qHm90TcDe3sM+9z/vOLPPjJYfHMPcu+U7ySWDemZ1divnmfXcYGx8fFwAAQkWoAABBS4Xq2vUbcvP2Xbl157788BMAAOXR9miDtEXJNg1DpQN60NVnj+XK6+cyNvcCAIDSaHu0QdqiZKyGodKK6QG+kwEAKIu2SJuUC5UWjJkUAOD/pi3SJuVCpeuDvhMAACibNolQAQCCRagAAEEjVACAoBEqXB4fd6Xbq8vEYlUm/+pL+8u8/7hzqmzXpHEs0t1flweecQDFIlS4RF5Jdb8vdus3ZWrVd8w5/bImq/0Dmd+eNdfqSaM55z8OQGEIFQAgaIQKI2BB5qOJkt0GfWkf1GTSN2PaqEnDHLJarw73VQ/cab6t3VpIn/+uLm3pyfy7xL7UmGc7WDfj67JpftTlwHup83T/yes9afXMbK8uT1LHRPvt66T3D695uJV5XTUj04c6GL+++zvlPtNOK3/NRTMzHIg09pgRInyECiPA3YA3d6Lf38zJVMfc2I9bUl1JHvdCnrb70j0yB3tv7C5auRt50r+G6pSxKFSmCLL5+0xmfwGhkgOZ3ciMRVH+L6G61+iImL9T92hXnib2AyEiVBgBmVBZczJr7u2pGYGdJfRluf5ear4bu3HRoWr0zAVSAS0iVB2pmZlTt72UGtMoy6EZ++5Qub9d7fOaLB+lZ59AiAgVRoAvVNHN/dv74cypUm+aWYLOENySmC9IFx2qzR0XgZMlwCJC1ZJp/WyDpkwtxmNvo8hsJV7/jKGyM7GOTJuY2tiZ61aSxwOBIVQIm71RJ7bEDTd903dximcdbmkrv6x1/lBlt/jYOFTm51Wd0cVLgJ5QnbadGio9fyk1+xlGeV2j832hcjOxaGn0w650o2ilzgECQqgwAs4wo7KzhL4sf4jGF104sstaFz+jcr8/+GxCaZcAi5hRufMf7Zk3bwPjomyXPVPv6Qyhih6iqDXi79HcOTxUgZARKowAX6jcElt8Uz51ppJ5qKKsUOn/dL38pkuArcR3SOcL1djKlvvu7dPJ0l36Pc3Ya2Y/X+UPE83omhWNlm/joQoEjFBhBKRDVfl1Qab3zY19+NCCWxbLzgoqvzVzy1rlhcqwS4C6FRSquapMfTUvZ2ZE8nXNfa+UeU+P/jQf8LgjL7dn7PiPG2uy/He8JBo9zh6fG8vORoHAECqMABeq4Zb5Pyr7fc0g/6i678nAs4Uqv9lzThlz4fGEyrBLgIWFyrDfKSWikh03M7nJvZa0NWa6DXpSa63IQ30IwwYpeWwsCmA2YEAgCBUAIGiECpeMzmz6svrJN1aUJfcAQnPWMwagaIQKl8zPMlFfkYnh/xtdhKo8/PhWJt74xgAUjVABAIJGqAAAQSNUAICgESoAQNAIFQAgaN5Q3bpzX668fu49AQCAsmiLtEm5UN28fVeuPnvsPQkAgLJoi7RJuVBdu37DFkwPYGYFACibtkcbpC3SJuVCFcdKK6YH6fogAABl0fZog5KRUqlQAQAQGkIFAAjYuPwDd3lD/h8fxioAAAAASUVORK5CYII=" InformativeScreenshot="3f4506f4955a24633dae0f604be4b24f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Button 'Xác nhận mua'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="972, 731, 188, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Xác nhận mua'" FullSelectorArgument="&lt;webctrl class='footer' parentclass='styles__PopConfirmOrderBody*' /&gt;&lt;webctrl tag='BUTTON' class='styles__Button*btn-success*' parentclass='footer' /&gt;" FuzzySelectorArgument="&lt;webctrl class='footer' parentclass='styles__PopConfirmOrderBody*' /&gt;&lt;webctrl tag='BUTTON' class='styles__Button*btn-success*' parentclass='footer' type='' aaname='Xác nhận mua ' check:text='Xác nhận mua' /&gt;" Guid="d640adbb-1867-4c49-afc0-446a633cfd71" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMAAAAAkCAYAAADfCTWTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATzSURBVHhe7Z3baxxVHMfju8L+ASLFB1HxsYFKX4ogIj6IiCJiReqDrYiIDyJFVETFIn1SEKWWCtpq1dqb0dC01iRtkyZtbu3mvrlns7ns5rq5bJKf53PkDJPNbCppYtuZ38CHZs59dr/fc37nFGaLYrGYbNnxoDyy61FFiQxoHu0XqfiVqIL2i/wJD722Tbbs3S73vV9s2KooIaLYahuN+zXvGYAMCt19aLfcVbJPikr3K0poQNNoG437TeAZAHdQIKiyooQFNI7WVxkAZ+jMr4QdNI7WAwywNbCCooQNtK4GUCKLGkCJNGoAJdKoAZRIowZQIo0aQIk0agAfT145Jr2zk1I9npSHLxwKLLMerk+NStlYT2Ae7Kg5astkcnPyTmt5YBllcwi9AfZ318r04oJ8mqj20vbEy6zYfkq2rih7PNUhVydTGyp+uJEBSke7pX5yWI4kWySRHZfn6k8FllM2ntAb4J6zX0hlZkD6zMzODP9AxUErNoS2repwYJ2N5kYGUG4doTcAvNBwWkYXZu1M+21/k0zm5uXdtgov/6XGEmmbScuyiCwuL8vFzKC3CmCa+PSYTYdL44OrjPNYzc/SPzclFZl+SZt+aGfA3O+6VmrzMUCdMR1p5FHmg46LNo/wp2ZiyLZNXrPpiz7JO2DGOjQ/Y+uSP7+0KCeHO62pXd/wUecl2ybtUMaN8+hQq8ws5la1m29I+mH8PAdtfz8Yt/W4/GMNI5EwAHzZWyezSzkLInLprAgt02lpnBqxwn6r5S8bHmEUt1ognidqf7VGYiU57asPzgAI/FUj+qfrjsvg3LQnMgQ3btp8r73S9sH9NQNiK0/32zapk18PYSLmY6l2ub/8gA2RGNsrTX+u6B8DZM1zEcLd+/c38nlXjTUCxsVgO5v+kJQx0o+mvhtPIQN8lrhsJ4h9XZdtW+fTfV6eKx8mImOA7dVH7AYXATHju3RE+Gz9SSmu+sG7R/AI5MXG32V4Pisfd1Z55dmk+vcT4AyAkFwa9REaf68luKeu/rZCXOfGer16/nLcI+SRhawVvCsP3JNOPveP1/5ijeQfj38Ma42Hz4HPw60yPDurp2s7bETGAN8NXPdWgDOjPd4XDG+3nPfCE3chkL1tlXbmzhdcPjdjAMzYasIvZnp33awBgsbzXw1A6EeoyOfkLlYENcAdzO74GRvLEvoQCnEq9Eni31mduDhpZsuSkYQX9zuBBK0AiIRZ2927tPUY4GUTyhB+1ZrYnVAlv96tMMDhZLN95jebz9m8/LbDRugNkH/qw8zPZtGdCnHkyBfMkShxNhs+Zn0E4uo2mf0BAiVGpx4zpL+P9RpgT7xMurITNs7GfK+be1aizTYA/9IPz/9M3Ql7AOD6OTHcYcMn9js8MydoE7oC3LkQ+jDjf+g7yeB0ZsysCC4U+rqvwTst6TEChwvmi6csInGnQLnlJZue//8E6zUA9TAcqxMXsTZl22cy1nybZYDnG05JtzEez8tzY3DXD8/LHog8NtJXJlJ2fG80n/XaChOhN4CirIUa4DaAcINZ9qvehsB8ZfNQA9wGEIYRormNsPL/oQZQIo0aQIk0agAl0qgBlEhTwAD6Yiwl/BR8MZa+GlGJAgVfjagvx1XCDJpG22g88OW4zgS4g0LESYoSHgq8Hl1/IEOJKvYHMvQnkpQoguZjsZj8A8ghydCPFr8aAAAAAElFTkSuQmCC" InformativeScreenshot="429454f7b68d4542af455e4c38a25af8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Xác nhận mua'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="972, 731, 188, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Xác nhận mua'" FullSelectorArgument="&lt;webctrl class='footer' parentclass='styles__PopConfirmOrderBody*' /&gt;&lt;webctrl tag='BUTTON' class='styles__Button*btn-success*' parentclass='footer' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Xác nhận mua ' tag='BUTTON' type='' class='styles__Button-sc-1kr1nak-0 iVLZKB btn-success flex-1' check:innerText='Xác nhận mua' /&gt;" Guid="39c33a8a-49a1-40a6-b446-717ba32f06b6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMAAAAAkCAYAAADfCTWTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATzSURBVHhe7Z3baxxVHMfju8L+ASLFB1HxsYFKX4ogIj6IiCJiReqDrYiIDyJFVETFIn1SEKWWCtpq1dqb0dC01iRtkyZtbu3mvrlns7ns5rq5bJKf53PkDJPNbCppYtuZ38CHZs59dr/fc37nFGaLYrGYbNnxoDyy61FFiQxoHu0XqfiVqIL2i/wJD722Tbbs3S73vV9s2KooIaLYahuN+zXvGYAMCt19aLfcVbJPikr3K0poQNNoG437TeAZAHdQIKiyooQFNI7WVxkAZ+jMr4QdNI7WAwywNbCCooQNtK4GUCKLGkCJNGoAJdKoAZRIowZQIo0aQIk0agAfT145Jr2zk1I9npSHLxwKLLMerk+NStlYT2Ae7Kg5astkcnPyTmt5YBllcwi9AfZ318r04oJ8mqj20vbEy6zYfkq2rih7PNUhVydTGyp+uJEBSke7pX5yWI4kWySRHZfn6k8FllM2ntAb4J6zX0hlZkD6zMzODP9AxUErNoS2repwYJ2N5kYGUG4doTcAvNBwWkYXZu1M+21/k0zm5uXdtgov/6XGEmmbScuyiCwuL8vFzKC3CmCa+PSYTYdL44OrjPNYzc/SPzclFZl+SZt+aGfA3O+6VmrzMUCdMR1p5FHmg46LNo/wp2ZiyLZNXrPpiz7JO2DGOjQ/Y+uSP7+0KCeHO62pXd/wUecl2ybtUMaN8+hQq8ws5la1m29I+mH8PAdtfz8Yt/W4/GMNI5EwAHzZWyezSzkLInLprAgt02lpnBqxwn6r5S8bHmEUt1ognidqf7VGYiU57asPzgAI/FUj+qfrjsvg3LQnMgQ3btp8r73S9sH9NQNiK0/32zapk18PYSLmY6l2ub/8gA2RGNsrTX+u6B8DZM1zEcLd+/c38nlXjTUCxsVgO5v+kJQx0o+mvhtPIQN8lrhsJ4h9XZdtW+fTfV6eKx8mImOA7dVH7AYXATHju3RE+Gz9SSmu+sG7R/AI5MXG32V4Pisfd1Z55dmk+vcT4AyAkFwa9REaf68luKeu/rZCXOfGer16/nLcI+SRhawVvCsP3JNOPveP1/5ijeQfj38Ma42Hz4HPw60yPDurp2s7bETGAN8NXPdWgDOjPd4XDG+3nPfCE3chkL1tlXbmzhdcPjdjAMzYasIvZnp33awBgsbzXw1A6EeoyOfkLlYENcAdzO74GRvLEvoQCnEq9Eni31mduDhpZsuSkYQX9zuBBK0AiIRZ2927tPUY4GUTyhB+1ZrYnVAlv96tMMDhZLN95jebz9m8/LbDRugNkH/qw8zPZtGdCnHkyBfMkShxNhs+Zn0E4uo2mf0BAiVGpx4zpL+P9RpgT7xMurITNs7GfK+be1aizTYA/9IPz/9M3Ql7AOD6OTHcYcMn9js8MydoE7oC3LkQ+jDjf+g7yeB0ZsysCC4U+rqvwTst6TEChwvmi6csInGnQLnlJZue//8E6zUA9TAcqxMXsTZl22cy1nybZYDnG05JtzEez8tzY3DXD8/LHog8NtJXJlJ2fG80n/XaChOhN4CirIUa4DaAcINZ9qvehsB8ZfNQA9wGEIYRormNsPL/oQZQIo0aQIk0agAl0qgBlEhTwAD6Yiwl/BR8MZa+GlGJAgVfjagvx1XCDJpG22g88OW4zgS4g0LESYoSHgq8Hl1/IEOJKvYHMvQnkpQoguZjsZj8A8ghydCPFr8aAAAAAElFTkSuQmCC" InformativeScreenshot="9b9b52872db3b578f8d8b5e852f8b49e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" ContentHash="r_d3WbuGiUyNVaInI2Jqjg" IconBase64="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" Selector="[string.Format(&quot;&lt;html app='msedge.exe' url='{0}*' /&gt;&quot;, in_S24_Url)]" Url="[in_S24_Url]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NCheckState DisplayName="Check Form Input Otp" EnableIfNotExists="False" Exists="[isFormOtp]" sap:VirtualizedContainerService.HintSize="534,247" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="15" Version="V3">
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/stock-order" DesignTimeRectangle="806, 552, 44, 44" DesignTimeScaleFactor="1" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl class='otpInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='otpInput' tag='INPUT' type='' aaname='' /&gt;" Guid="bb3142a5-4a6f-4258-821d-988ffcc0cd9f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVGhD7Zk/ioNAFIcFi4CFhKyVB9jWeg8QSJUzyBbewFvZegVbz+A5LN7yZXmiZgLLws5zlnnwqxx935f5E9CkLEsJOS8F6rqWrutkmiaZ51l8Fz3pDQMsLkbyJHC73WQYhsdD+r6XpmmkqiopikLO57OX0Iue9IaBggm2Pe9GAFPMx3GU6/XqfLhFYIEJtv1sLALYMQDjy+XyuDHPczmdTpKmqSRJ4jX0pDcMsMAEG4zrmVgEmCIsFT7LMueDLQKLSsAI60aAaaF02RwJXqMSMFK6lB4C7HSmhwFMmesBR4guJ1hhXgQ4rtjxXGTduW4+QmCDEVaYFwE2BscWFy027E8DG4ywwrwIUHrOu248UmCEldoIcCEUAUJFAYtEAetEAetEAetEAetEAet4E3j7+JS2bb9zf3eO+U28CfxVooB1ooB1ooB1ooB1ooB1/q9A0K8Wg3+5G/zr9eA/cAT/iYkE/ZGPBP+ZlTAtDMBSl9MRAgtMsOnS0WwECHZMEYUxO55jS/8nfIRe9KQ3DBRM619e8ySgwZSdznGFue+iJ71h2P/q67wUCCOlfAFXN5zfZq2DFQAAAABJRU5ErkJggg==" InformativeScreenshot="71ae772b897b320abfc5feba09211579.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+    <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Đặt lệnh cổ phiếu" ContinueOnFailure="False" DisplayName="Verify Mua Stock" Expression="[isFormOtp]" sap:VirtualizedContainerService.HintSize="534,62" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" OutputMessageFormat="[If(isFormOtp, &quot;Đặt lệnh cổ phiếu &quot; + in_NameStock + &quot; thành công&quot;, &quot;Đặt lệnh cổ phiếu &quot; + in_NameStock + &quot; thất bại&quot; )]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="534,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Done Khoi Tao Mua Stock &quot; + in_NameStock]" />
+  </Sequence>
+</Activity>

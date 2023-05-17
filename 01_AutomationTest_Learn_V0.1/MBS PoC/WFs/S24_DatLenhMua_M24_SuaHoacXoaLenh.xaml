@@ -1,0 +1,222 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="S24_DatLenhMua_M24_SuaLenh" this:S24_DatLenhMua_M24_SuaLenh.in_S24_Url="https://uat-s24.mbs.com.vn" this:S24_DatLenhMua_M24_SuaLenh.in_S24_Username="151512" this:S24_DatLenhMua_M24_SuaLenh.in_S24_Password="[New System.Net.NetworkCredential(String.Empty, &quot;mbs123456&quot;).SecurePassword]" this:S24_DatLenhMua_M24_SuaLenh.in_Subdirectory="stock-order" this:S24_DatLenhMua_M24_SuaLenh.in_NameStock="mbs" this:S24_DatLenhMua_M24_SuaLenh.in_VolumeStock="100" this:S24_DatLenhMua_M24_SuaLenh.in_PriceStock="16.00" this:S24_DatLenhMua_M24_SuaLenh.in_MobileDeviceInfo="Device;http://localhost:4723/wd/hub;Android;ADR00004648;9" this:S24_DatLenhMua_M24_SuaLenh.in_MBSUser="151512" this:S24_DatLenhMua_M24_SuaLenh.in_MBSPass="mbs123456" this:S24_DatLenhMua_M24_SuaLenh.in_appPackage="vn.com.mbs.MbsApp" this:S24_DatLenhMua_M24_SuaLenh.in_appActivity="vn.com.mbs.MbsApp.MainActivity" this:S24_DatLenhMua_M24_SuaLenh.in_OTP="123456" this:S24_DatLenhMua_M24_SuaLenh.in_EditedVolume="100" this:S24_DatLenhMua_M24_SuaLenh.in_MaPin="123456" this:S24_DatLenhMua_M24_SuaLenh.in_OrderOption="xoa lệnh" this:S24_DatLenhMua_M24_SuaLenh.in_EditedPrice="17.00" this:S24_DatLenhMua_M24_SuaLenh.in_AppPath_FO="E:\V58\V58\mbs test.exe" this:S24_DatLenhMua_M24_SuaLenh.in_FO_Username="0002" this:S24_DatLenhMua_M24_SuaLenh.in_FO_Password="123456" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MobileAutomation.Activities;assembly=UiPath.MobileAutomation.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_S24_Url" Type="InArgument(x:String)" />
+    <x:Property Name="in_S24_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_S24_Password" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_Subdirectory" Type="InArgument(x:String)" />
+    <x:Property Name="in_NameStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_VolumeStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_PriceStock" Type="InArgument(x:String)" />
+    <x:Property Name="in_MobileDeviceInfo" Type="InArgument(x:String)" />
+    <x:Property Name="in_MBSUser" Type="InArgument(x:String)" />
+    <x:Property Name="in_MBSPass" Type="InArgument(x:String)" />
+    <x:Property Name="in_appPackage" Type="InArgument(x:String)" />
+    <x:Property Name="in_appActivity" Type="InArgument(x:String)" />
+    <x:Property Name="in_OTP" Type="InArgument(x:String)" />
+    <x:Property Name="in_EditedVolume" Type="InArgument(x:String)" />
+    <x:Property Name="in_MaPin" Type="InArgument(x:String)" />
+    <x:Property Name="in_OrderOption" Type="InArgument(x:String)" />
+    <x:Property Name="in_EditedPrice" Type="InArgument(x:String)" />
+    <x:Property Name="in_AppPath_FO" Type="InArgument(x:String)" />
+    <x:Property Name="in_FO_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_FO_Password" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1250,1666</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>S24_DatLenhMua_M24_SuaLenh_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="31">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.MobileAutomation.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="S24_DatLenhMua_M24_SuaLenh" sap:VirtualizedContainerService.HintSize="441,1601" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DTSoLenh_S24" />
+      <Variable x:TypeArguments="x:String" Name="AppiumURL" />
+      <Variable x:TypeArguments="uma:MobileDevice" Name="MobileConnection" />
+      <Variable x:TypeArguments="x:String" Name="NameStockOrder" />
+      <Variable x:TypeArguments="x:String" Name="PriceOrder" />
+      <Variable x:TypeArguments="x:String" Name="VolumeOrder" />
+      <Variable x:TypeArguments="x:String" Name="SubAccountOrder" />
+      <Variable x:TypeArguments="x:String" Name="IDOrder" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DTOrder_FO" />
+      <Variable x:TypeArguments="x:String" Name="Status" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\S24 Web\S24_Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MBS Framework\S24 Web\S24_Login.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Url">[in_S24_Url]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Username">[in_S24_Username]</InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_S24_Password">[in_S24_Password]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\S24 Web\S24_NavigateTab.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="MBS Framework\S24 Web\S24_NavigateTab.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Url">[in_S24_Url]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Subdirectory">[in_Subdirectory]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\S24 Web\S24_OrderStock.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="MBS Framework\S24 Web\S24_OrderStock.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NameStock">[in_NameStock]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Url">[in_S24_Url]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_VolumeStock">[in_VolumeStock]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PriceStock">[in_PriceStock]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\S24 Web\S24_FillOTP.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="MBS Framework\S24 Web\S24_FillOTP.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Url">[in_S24_Url]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_OTP">[in_OTP]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\S24 Web\S24_GetTableOrder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="MBS Framework\S24 Web\S24_GetTableOrder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_S24_Url">[in_S24_Url]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTSoLenh_S24">[DTSoLenh_S24]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_NameStockOrder">[NameStockOrder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_PriceOrder">[PriceOrder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_VolumeOrder">[VolumeOrder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_SubAccountOrder">[SubAccountOrder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_IDOrder">[IDOrder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Status" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\MBS Mobile\MBS_Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="MBS Framework\MBS Mobile\MBS_Login.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_AppiumURL">[AppiumURL]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MobileDeviceInfo">[in_MobileDeviceInfo]</InArgument>
+        <OutArgument x:TypeArguments="uma:MobileDevice" x:Key="out_MobileConnection">[MobileConnection]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MBSUser">[in_MBSUser]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MBSPass">[in_MBSPass]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_appPackage">[in_appPackage]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_appActivity">[in_appActivity]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS_Edit OrDeleteOrder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="MBS Framework\MBS Mobile\MBS_Edit OrDeleteOrder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="uma:MobileDevice" x:Key="in_MobileConnection">[MobileConnection]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MDCAppiumUrl">[AppiumURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_appPackage">[in_appPackage]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SubAccountOrder">[SubAccountOrder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NameStockOrder">[NameStockOrder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PriceOrder">[PriceOrder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_VolumeOrder">[VolumeOrder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_IDOrder">[IDOrder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_EditedPrice">[in_EditedPrice]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_EditedVolume">[in_EditedVolume]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MaPin">[in_MaPin]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_OrderOption">[in_OrderOption]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Status">[Status]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\FO\FO_Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="MBS Framework\FO\FO_Login.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FOPath">[in_AppPath_FO]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Username">[in_FO_Username]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Password">[in_FO_Password]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\FO\FO_GetTableOrder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="MBS Framework\FO\FO_GetTableOrder.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTOrder_FO">[DTOrder_FO]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_AppPath_FO">[in_AppPath_FO]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MBS Framework\FO\FO_Validate_Order.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="MBS Framework\FO\FO_Validate_Order.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Stock">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NameStockOrder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Account">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SubAccountOrder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Price">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="If(in_OrderOption.ToLower.Equals(&quot;edit&quot;), in_EditedPrice, PriceOrder).Replace(&quot;.00&quot;, &quot;&quot;)" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_OrderID" />
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DTOrder_FO">
+          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DTOrder_FO" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_OrderID">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="IDOrder.TrimStart(&quot;O&quot;c).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Volume">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="VolumeOrder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Status">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Status" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
