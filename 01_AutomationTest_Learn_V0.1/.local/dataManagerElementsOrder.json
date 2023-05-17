@@ -311,7 +311,49 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/04_Selector/Sequence.xaml",
+      "Path": "Utilities/Cource/04_Selector/02_Set Data.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "LastName&Sequence_6",
+        "FistName&Sequence_6",
+        "namesDataTable&Sequence_1",
+        "File&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/01_Get Data - Fine Tuning Selectors.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Output&Sequence_1",
+        "Description&Sequence_1",
+        "WIID&Sequence_1",
+        "DataCompare&Sequence_1",
+        "DataCheck&Sequence_1",
+        "RowNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Password",
+        "in_UserName",
+        "in_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/04_Selector/03_Highlight WFT Type Items.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SelectedValue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/06_Descriptor/Sequence3.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
@@ -319,7 +361,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/04_Selector/Sequence1.xaml",
+      "Path": "Utilities/Cource/06_Descriptor/Sequence4.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
@@ -327,31 +369,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/04_Selector/Sequence2.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Utilities/Cource/04_Selector/Sequence3.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Utilities/Cource/04_Selector/Sequence4.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Utilities/Cource/04_Selector/Sequence5.xaml",
+      "Path": "Utilities/Cource/06_Descriptor/Sequence5.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
@@ -413,6 +431,98 @@
       "VariablesSectionElementsOrder": [
         "WinnerCounts&Sequence_1",
         "datainput&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/03_Sum.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Sum",
+        "in_FisrtValue",
+        "in_SecondValue",
+        "in_IOExecutionInFor"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/01_Practice1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CourceEmail&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/00_Foreach.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IEnumerable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/07_IfCondition.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "in1&Sequence_1",
+        "in2&Sequence_1",
+        "result&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/07.1_FindNumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "InputArray&Sequence_1",
+        "Min&Sequence_1",
+        "Max&Sequence_1",
+        "FirstValue&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/08_DoWhile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Year&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/09_ForEach.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FolderPath&Sequence_1",
+        "InvoiceArray&Sequence_1",
+        "NewFileName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/01_BasicConcept/10_Switch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "InvoiceDirectory&Sequence_1",
+        "File&Sequence_2",
+        "FileName&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
