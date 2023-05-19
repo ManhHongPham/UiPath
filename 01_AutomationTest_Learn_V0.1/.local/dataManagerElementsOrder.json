@@ -363,7 +363,11 @@
     {
       "Path": "Utilities/Cource/06_Descriptor/Sequence4.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "c&Sequence_1",
+        "b&Sequence_1",
+        "a&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -525,6 +529,43 @@
         "FileName&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/TCs/FO_DatLenhMua.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SEMessage&StateMachine_1",
+        "isFail&StateMachine_1",
+        "TestLinkBaseUrl&StateMachine_1",
+        "TestCaseExternalID&StateMachine_1",
+        "TL_TC_buildID&StateMachine_1",
+        "TestLinkAPIKEY&StateMachine_1",
+        "testPlanID&StateMachine_1",
+        "Notes&StateMachine_1",
+        "dtPerformer&StateMachine_1",
+        "TC_Result&StateMachine_1",
+        "GoogleIDFile&StateMachine_1",
+        "EvidencePaths&StateMachine_1",
+        "QuoteID&StateMachine_1",
+        "ErrorMessages&StateMachine_1",
+        "MobileDeviceInfo&StateMachine_1",
+        "MBS_AppActivity&StateMachine_1",
+        "MBS_AppPackage&StateMachine_1",
+        "S24Url&StateMachine_1",
+        "S24_Username&StateMachine_1",
+        "S24_Password&StateMachine_1",
+        "MBS_Pin&StateMachine_1",
+        "FO_Username&StateMachine_1",
+        "FO_Password&StateMachine_1",
+        "MBS_SMSOtp&StateMachine_1",
+        "AppPath_FO&StateMachine_1",
+        "itemData&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
