@@ -53,13 +53,13 @@
         "editingStatus": "Publishable",
         "testCaseId": "67727a70-5412-4110-9a49-330da1034787",
         "testCaseType": "TestCase",
-        "fileName": "Utilities\\01_Open.xaml"
+        "fileName": "Utilities\\Basic\\01_Open.xaml"
       },
       {
         "editingStatus": "Publishable",
         "testCaseId": "7fa8dc46-cc71-4bd2-b5d9-29c5c5f582fd",
         "testCaseType": "TestCase",
-        "fileName": "Utilities\\02_log.xaml"
+        "fileName": "Utilities\\Basic\\02_log.xaml"
       }
     ],
     "modernBehavior": true

@@ -295,7 +295,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/01_Open.xaml",
+      "Path": "Utilities/Basic/01_Open.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
@@ -303,7 +303,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/02_log.xaml",
+      "Path": "Utilities/Basic/02_log.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
@@ -361,9 +361,11 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/06_Descriptor/Sequence4.xaml",
+      "Path": "Utilities/Cource/06_Descriptor/03_TryCatch.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "d&Sequence_1",
+        "dt_Input&Sequence_1",
         "c&Sequence_1",
         "b&Sequence_1",
         "a&Sequence_1"
@@ -373,9 +375,13 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Cource/06_Descriptor/Sequence5.xaml",
+      "Path": "Utilities/Cource/06_Descriptor/01_retryScope.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "c&Sequence_1",
+        "b&Sequence_1",
+        "a&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -565,6 +571,279 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_OrchestratorQueueName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Cource/06_Descriptor/02_StateMachine.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "d&StateMachine_1",
+        "b&StateMachine_1",
+        "c&StateMachine_1",
+        "a&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/TCs/S24_DatLenhMua.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SEMessage&StateMachine_1",
+        "isFail&StateMachine_1",
+        "TestLinkBaseUrl&StateMachine_1",
+        "TestCaseExternalID&StateMachine_1",
+        "TL_TC_buildID&StateMachine_1",
+        "TestLinkAPIKEY&StateMachine_1",
+        "testPlanID&StateMachine_1",
+        "Notes&StateMachine_1",
+        "dtPerformer&StateMachine_1",
+        "TC_Result&StateMachine_1",
+        "GoogleIDFile&StateMachine_1",
+        "EvidencePaths&StateMachine_1",
+        "QuoteID&StateMachine_1",
+        "ErrorMessages&StateMachine_1",
+        "MobileDeviceInfo&StateMachine_1",
+        "MBS_AppActivity&StateMachine_1",
+        "MBS_AppPackage&StateMachine_1",
+        "S24Url&StateMachine_1",
+        "S24_Username&StateMachine_1",
+        "S24_Password&StateMachine_1",
+        "MBS_Pin&StateMachine_1",
+        "FO_Username&StateMachine_1",
+        "FO_Password&StateMachine_1",
+        "MBS_SMSOtp&StateMachine_1",
+        "AppPath_FO&StateMachine_1",
+        "itemData&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/FO/FO_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "myHome&Sequence_1",
+        "isPageHome&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_FOPath",
+        "in_Username",
+        "in_Password"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/MBS Mobile/MBS_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MobileDeviceCapacity&Sequence_1",
+        "MDCName&Sequence_1",
+        "MDCPlatform&Sequence_1",
+        "MDCDeviceName&Sequence_1",
+        "MDCPlatformVersion&Sequence_1",
+        "isSuccess&Sequence_15",
+        "LoginStatus&Sequence_15",
+        "LoginMessageSuccess&Sequence_15",
+        "LoginMessageFail&Sequence_15",
+        "TextCapNhat&Sequence_15",
+        "HasUpdateButton&Sequence_15",
+        "isDangNhapKhac&Sequence_15",
+        "IsPopupQuangCao&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_AppiumURL",
+        "in_MobileDeviceInfo",
+        "out_MobileConnection",
+        "in_MBSUser",
+        "in_MBSPass",
+        "in_appPackage",
+        "in_appActivity"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/S24 Web/S24_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MyHome&Sequence_1",
+        "S24BrowserInstance&Sequence_1",
+        "ElementExist&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "in_S24_Username",
+        "in_S24_Password"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/ACME/01_ACME_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "checkTrue&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ACME_Username",
+        "in_ACME_Password",
+        "in_ACME_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/DoubleUI/01_TypingInvoice.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/Excel/01_Excel_readdt.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_PathExcelFile",
+        "out_DTComparation"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/WFs/01_Getdata_Compare_Fill.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_SubDictionary",
+        "in_ACME_Password",
+        "in_ACME_Username",
+        "in_ACME_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/ACME/02_ACME_Navigate_WorkItems.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "URL_WorkItems&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ACME_URL",
+        "in_SubDictionary"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/S24 Web/S24_NavigateTab.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "S24Url&Sequence_1",
+        "ElementExist&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "in_Subdirectory"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/WFs/S24 Web/Demo_S24_Sell.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AppiumURL&Flowchart_1",
+        "MobileConnection&Flowchart_1",
+        "OTP&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "in_S24_Username",
+        "in_S24_Password",
+        "in_MobileDeviceInfo",
+        "in_AppPackage",
+        "in_AppActivity",
+        "in_PinSmartOTP",
+        "in_NameStock",
+        "in_VolumeStock",
+        "in_PriceStock",
+        "in_SMSOTP"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/S24 Web/S24_GetTableOrder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ElementExist&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "out_DTSoLenh_S24",
+        "out_NameStockOrder",
+        "out_PriceOrder",
+        "out_VolumeOrder",
+        "out_SubAccountOrder",
+        "out_IDOrder",
+        "out_Status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/ACME/03_ACME_Getdata_Workitems.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "RowItem&Sequence_4",
+        "dt_worksItems&Sequence_1",
+        "CurrentDate&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_SubDirection",
+        "out_dt",
+        "in_ACME_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/FO/FO_GetTableOrder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_DTOrder_FO",
+        "in_AppPath_FO"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/FO/FO_Validate_Order.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Stock",
+        "in_Account",
+        "in_Price",
+        "out_OrderID",
+        "in_DTOrder_FO",
+        "in_OrderID",
+        "in_Volume",
+        "in_Status"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

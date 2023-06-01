@@ -1,16 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_S24_Url" Type="InArgument(x:String)" />
     <x:Property Name="in_S24_Username" Type="InArgument(x:String)" />
     <x:Property Name="in_S24_Password" Type="InArgument(ss:SecureString)" />
   </x:Members>
-  <mva:VisualBasic.Settings>
+  <VisualBasic.Settings>
     <x:Null />
-  </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1310,3660</sap:VirtualizedContainerService.HintSize>
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1310,3859</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="38">
+    <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -49,6 +49,8 @@
       <x:String>UiPath.Testing</x:String>
       <x:String>UiPath.Testing.Activities</x:String>
       <x:String>System.Net</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -89,10 +91,17 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1320,3595" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1320,3794" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="MyHome" />
       <Variable x:TypeArguments="ui:UiElement" Name="S24BrowserInstance" />
@@ -111,16 +120,16 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1258,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Open &quot; + in_S24_Url + &quot;website&quot;]" />
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1258,3158" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="1" RetryInterval="00:00:03">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1258,3329" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="1" RetryInterval="00:00:03">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="1216,2910" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" OutUiElement="[S24BrowserInstance]" ScopeGuid="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V1" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="1216,3081" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" OutUiElement="[S24BrowserInstance]" ScopeGuid="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V1" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1182,2743" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1182,2914" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="ElementExist" />
                   </Sequence.Variables>
@@ -142,7 +151,7 @@
                       </ui:Target>
                     </ui:Activate.Target>
                   </ui:Activate>
-                  <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="1120,52" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+                  <ui:GetActiveWindow ApplicationWindow="{x:Null}" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="1120,222" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
                     <ui:GetActiveWindow.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -159,7 +168,7 @@
                     </ui:GetActiveWindow.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -207,16 +216,16 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <uix:NCheckState DisplayName="Check Open Website S24 Success" sap:VirtualizedContainerService.HintSize="1120,2317" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Timeout="5" Version="V1">
+                  <uix:NCheckState DisplayName="Check Open Website S24 Success" sap:VirtualizedContainerService.HintSize="1120,2318" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Timeout="5" Version="V1">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Sequence Login" sap:VirtualizedContainerService.HintSize="816,2100" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Sequence Login" sap:VirtualizedContainerService.HintSize="816,2101" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ClickType="Single" DisplayName="Click 'Đăng nhập'" sap:VirtualizedContainerService.HintSize="754,194" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V3">
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Đăng nhập'" sap:VirtualizedContainerService.HintSize="754,193" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/" DesignTimeRectangle="1798, 103, 120, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Đăng nhập'" FullSelectorArgument="&lt;webctrl tag='BUTTON' class='styles__Button*' parentclass='styles__HeaderRightCard*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' class='styles__Button*' parentclass='styles__HeaderRightCard*' type='' aaname='Đăng nhập ' check:text='Đăng nhập' /&gt;" Guid="0e0f70e0-c39b-4bee-b195-dd7dce0c1c12" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAkCAYAAABLw14kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANxSURBVHhe7Zs/a9tAFMD7Ebz1OwTL+hMXQkNLIaSEQIKzxA0lFJdCSdvg4KGUtKEhIeBQN4mXfIFsnbqlU6ZMHj158ubNk5fi6fW9s86WLFl2gy1Lujf8wKc764773Xt3EuhRKpUCRh1YuGK4hD9eeAELH/+A9fMvLFaBiTHkkFySU6fjvnCqoEb6qzKks88hrWeZOIMOySU5dUrvC6fVIGT7/ZmJLeSU3HqE00rgyE4g6JTceoRT3vf9AxN7yC0LVwgWrhgsXDFYuGKwcMWIj/DlezDPG6BlNyH9pg3WwY1/u1mwUgOz2oSMX51kow7mJYD5KcRxPYBoCN9uij4lVrkNev58qN0eaPudXpsyTv6Ss27GjBP+9DcYNOa1a9BPOmDsnPq3iwA0f9EQflYDTZQxglfvwPiB0fLuytt2HkwS4TEhgsJtthpgVTCFm3Z5o4ZRZGeBiw7oW8XedSGjBXqhJVLqIqXV4q/BfZZuQD/qDv5Xanv7IsQYGpApdsAS9+mCUbAX3Lg+Ro1NvwL9DMAoNcC86NVbx3XQwsxOQ9AYoilcxzRZ7YK+jr+f3IJBAvLf8DpmgJ0WSsGIo8UgZNh7J5XXcC+t4qSv0D02QSvhRH+/x70fy1lMuadYHiUc+zN2aSv5jz6CxmYLt77eufq3So7FEjJzF575bEeGjbEt60i4XTb38NAmo4bKOMlywj3p1o4qcR+8B0ajnpN1WdDe4zlgZIQ7r1P/E/QRNDbXWGzW673MJcshM3fhgnERTpGab4JZcS6OCYX3J7/H1IUHjc1PuOde4ULji6Zw2sNlaqQUetmGzCpGk6ifVAbu3xW5aHpMXXjQ2PyEc4Qjrsl+DekcHoKcp/QcHeBakHmGdZhCtV3cJyeNvgM8sE26hz9EeNDY7HbW4dAeHuY7hCGiIxz7lHifw4ug9U/PuBA+1MVBSURuoHAEJzlzODilG8f4e5rCg8Ym2zlP6UfYh/Kn9Fli4snZURYp/cut69rsGFp8ESDxwrX97uBxahlP0LRVFKb/Jkx7i8/3J7h1uK6z8PChFy8ypWOqdb0wmSZL16C9dDyeCVg4M2dYuGKwcMVg4YrBwhXDVzh/iJBQRn2IwJ8aJZORnxrxx4QJAx2SS3Lq+zGhlE6rgRpR3mfiCzkkl07ZhEs4k3xYuFKk4B9cy7CbGYI0JgAAAABJRU5ErkJggg==" InformativeScreenshot="5102647adf2e95d188f10c3f39a4e178.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -228,12 +237,12 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into User" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="754,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Text="[in_S24_Username]" Version="V1">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into User" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="754,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" Text="[in_S24_Username]" Version="V1">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/" DesignTimeRectangle="754, 404, 420, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='username' tag='INPUT' type='' class='input' aaname='' /&gt;" Guid="a35230d4-65d3-4209-bc62-c8734f8f8322" ImageBase64="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" InformativeScreenshot="b8f50d29750d0c7aab855a821d8d930b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                           </uix:NTypeInto.Target>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Pass" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="754,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" IsPassword="True" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" SecureText="[in_S24_Password]" Version="V1">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into Pass" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="754,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" IsPassword="True" ScopeIdentifier="e46ea403-2f8a-492f-9d9e-bf82f765b3c6" SecureText="[in_S24_Password]" Version="V1">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable BrowserURL="https://s24.mbs.com.vn/" DesignTimeRectangle="754, 468, 402, 17" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='input' aaname='' /&gt;" Guid="0071f9f6-1d1c-4473-9f8d-9b365af1bec0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZYAAAAVCAYAAABlq8hUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARFSURBVHhe7ZpXSy1LEEaPOYsBMeODog+GBwVzQlEEc0LMGDBhAMPv73tXH3roGXuHs68eLu5vw2Jmqmeqes9DfVPV/evfnxFCCCG+kKBRCCGEyJWgUQghhMiVoFHkQFNTk1ldXTWlpaXBcSGEyBOCRpEDS0tLpqurKzgmhBB5RNCYFr7Ij46OTG9vb3AcuGd9fd1cX1/bL/nQPV9NLjFbW1vNxcWFqa6u/jSGr8nJyU92R0lJiVlZWTGXl5dmbW1NlYoQQvwmbiDB3t7e2oRZWFgYs5OAScTZCMv4+Lj1MTAwYPb3901lZWXwvq8kVcx04pGrsPBuxsbGbDzeB8epqanYOxNCiDwlbnDC8vr6avr6+mL2PxGW/xPfISxCCCFSEjc4YUE4rq6uTG1tbWRPCsvc3JxtO72/v5vj4+PoXsZZb0CcGNvY2DBlZWV2jGS9u7trn/v4+LBtpFDbijjcg5+Xlxfra2FhwQwNDZmHh4dPflPFRBiI40iKoS8sRUVFZnFx0RweHpqKigo7VyoR/hs+mU9LS0v0bH9/v50Lfv0xYvB+mBPX/rtzzwohxA8mbnDCQtLc29uziZX2TkhYnJiQhDl3X/ezs7NRck6OkaxPT0/tc6xRsIvq4ODAnvvzIM7j46MZHh42BQUFprOz0zw/P1vBID7zOT8/N4ODgxlj+uLhx/DHampqzMTEROSDMeZ6c3Njmpub7fy4Zi2FsY6ODnN3d2ePzG9mZiYSEwmLECLPiRucsJAcGxoabGKlJRYSFv/rnyRO4uW8vLw8SqowPT0djXF0CR/q6+ut32TVkhQDqg/Ewo/p+0oXMxthGR0dtce6urpoLDlXXzCKi4tj60ZtbW22+iKGhEUIkefEDSRBJyxcUxHQEmtvb4+SYyZhwcfW1pZtS7kWlBtLJutUSTcpBqGYvq90MZO+fBijMqJSOTk5yVpYaJuxWYBnXTzeGzEkLEKIPCduIAn6wkIC3d7etrusEBiSYzphoW22ublplpeXo8Tqi04yWWdbsaQTlkwxMwkLlQatOYQCceI/M5acqy8Y7DyjFUdV5/y4GBIWIUSeEzckhQVInvf393aNg+QYSvIukdMiQoRYcyBBIxy0sFyS58i1v8bCWk5ojSVbYckUE18srjsR8PHjEIP1HtZaGHP+3b2+YLD2Q4yqqip7PT8/H1Us+GT9hSqP+YyMjNjKBrvzJYQQP5i4ISQsQEvs6enJJsd0wsI5u6P8XV/Yd3Z2bGXBub8r7OzszDQ2NkZ+HH7C5zqdsHCeLibPIl5vb2+mp6cneh6ScfDDuhKi4PsHX1hY82EjAbvF2LVGtURFh6gRk+doywH3MTcJixAiTwgav41kshZCCPHjCBr/M7SI+ILv7u6O2b9TWFLFFEII8VcJGr8E2kq0jXzbd1csoZhCCCH+KkGjEEIIkStBoxBCCJErQaMQQgiRA7/MP2f5mggvERWEAAAAAElFTkSuQmCC" InformativeScreenshot="e6e55d6de4248ed5db2aac3c2b0fc0ac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                           </uix:NTypeInto.Target>
@@ -321,6 +330,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="S24_Đăng nhập" ContinueOnFailure="False" DisplayName="Verify Dang Nhap Thanh Cong" Expression="[MyHome]" sap:VirtualizedContainerService.HintSize="1258,62" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" OutputMessageFormat="[if(MyHome, &quot;Đăng nhập thành công&quot;, &quot;Đăng nhập thất bại&quot;)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
+    <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="S24_Đăng nhập" ContinueOnFailure="False" DisplayName="Verify Dang Nhap Thanh Cong" Expression="[MyHome]" sap:VirtualizedContainerService.HintSize="1258,90" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" OutputMessageFormat="[if(MyHome, &quot;Đăng nhập thành công&quot;, &quot;Đăng nhập thất bại&quot;)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
   </Sequence>
 </Activity>
