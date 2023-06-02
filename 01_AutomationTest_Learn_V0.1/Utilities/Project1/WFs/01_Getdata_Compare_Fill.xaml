@@ -1,14 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_01_Getdata_Compare_Fill" this:_01_Getdata_Compare_Fill.in_ACME_URL="https://acme-test.uipath.com" this:_01_Getdata_Compare_Fill.in_ACME_Username="manhhauik13@gmail.com" this:_01_Getdata_Compare_Fill.in_ACME_Password="test1234" this:_01_Getdata_Compare_Fill.in_SubDictionary="work-items" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_01_Getdata_Compare_Fill" this:_01_Getdata_Compare_Fill.in_ACME_URL="https://acme-test.uipath.com" this:_01_Getdata_Compare_Fill.in_ACME_Username="manhhauik13@gmail.com" this:_01_Getdata_Compare_Fill.in_ACME_Password="test1234" this:_01_Getdata_Compare_Fill.in_SubDictionary="work-items" this:_01_Getdata_Compare_Fill.in_PathExcel="Utilities\Project1\Data_Project1.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ACME_URL" Type="InArgument(x:String)" />
     <x:Property Name="in_ACME_Username" Type="InArgument(x:String)" />
     <x:Property Name="in_ACME_Password" Type="InArgument(x:String)" />
     <x:Property Name="in_SubDictionary" Type="InArgument(x:String)" />
+    <x:Property Name="in_PathExcel" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>888,789</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>926,1210</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01_Getdata_Compare_Fill_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -37,6 +38,9 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -72,21 +76,38 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="_01_Getdata_Compare_Fill" sap:VirtualizedContainerService.HintSize="634,637" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="_01_Getdata_Compare_Fill" sap:VirtualizedContainerService.HintSize="653,1145" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtACME" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtCompare" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 290,107.5 290,163.52</av:PointCollection>
+        <x:Double x:Key="Height">1108</x:Double>
+        <x:Double x:Key="Width">619</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID1">
+    <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">190,163.52</av:Point>
@@ -94,17 +115,11 @@
           <av:PointCollection x:Key="ConnectorLocation">290,215.52 290,245.52 280,245.52 280,263.52</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Project1\Common\ACME\01_ACME_Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\ACME\01_ACME_Login.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME- login" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\ACME\01_ACME_Login.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_URL">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ACME_URL" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_Password">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ACME_Password" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_Username">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ACME_Username" />
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_URL">[in_ACME_URL]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_Password">[in_ACME_Password]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_ACME_Username">[in_ACME_Username]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -118,16 +133,13 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">180,263.52</av:Point>
               <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">280,315.52 280,364</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Utilities\Project1\Common\ACME\02_ACME_Navigate_WorkItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\ACME\02_ACME_Navigate_WorkItems.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME- naviagetab" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\ACME\02_ACME_Navigate_WorkItems.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_SubDictionary">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SubDictionary" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ACME_URL">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ACME_URL" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_SubDictionary">[in_SubDictionary]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_ACME_URL">[in_ACME_URL]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -135,9 +147,92 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">180,364</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">280,416 280,493.99999999999994</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME- getDataTable" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogExit="WithArguments" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\ACME\03_ACME_Getdata_Workitems.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_ACME_URL">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ACME_URL" />
+                  </InArgument>
+                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt">
+                    <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtACME" />
+                  </OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_SubDirection">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SubDictionary" />
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">180,493.99999999999994</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">280,546 280,596</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel- readfilemaster" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogExit="WithArguments" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\Excel\01_Excel_readdt.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTComparation">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtCompare" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_PathExcelFile">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_PathExcel" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">180,596</av:Point>
+                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Compare" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\DoubleUI\01_Compare.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWorkItems">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtACME" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCompare">
+                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtCompare" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
   </Flowchart>
 </Activity>
