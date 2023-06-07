@@ -701,10 +701,15 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Utilities/Project1/Common/DoubleUI/01_TypingInvoice.xaml",
+      "Path": "Utilities/Project1/Common/DoubleUI/01_Compare.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Type&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtCompare",
+        "in_dtWorkItems"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -722,8 +727,12 @@
     {
       "Path": "Utilities/Project1/WFs/01_Getdata_Compare_Fill.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dtCompare&Flowchart_1",
+        "dtACME&Flowchart_1"
+      ],
       "ArgumentsSectionElementsOrder": [
+        "in_PathExcel",
         "in_SubDictionary",
         "in_ACME_Password",
         "in_ACME_Username",
@@ -844,6 +853,110 @@
         "in_OrderID",
         "in_Volume",
         "in_Status"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/DoubleUI/02_TypingD.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Condition"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/DoubleUI/02_TypingS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Utilities/Project1/Common/DoubleUI/02_TypingW.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/MBS Framework/S24 Web/S24_Validate_Order.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_DTSoLenhS24",
+        "in_Stock",
+        "in_Account",
+        "in_Volume",
+        "in_Price",
+        "out_OrderID",
+        "in_SoHieuLenh"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/WFs/S24 Web/Demo_S24.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AppiumURL&Flowchart_1",
+        "MobileConnection&Flowchart_1",
+        "OTP&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "in_S24_Username",
+        "in_S24_Password",
+        "in_MobileDeviceInfo",
+        "in_AppPackage",
+        "in_AppActivity",
+        "in_PinSmartOTP",
+        "in_NameStock",
+        "in_VolumeStock",
+        "in_PriceStock"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MBS PoC/WFs/S24 Web/WF_S24_DatLenhMua.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AppiumURL&Flowchart_1",
+        "MobileConnection&Flowchart_1",
+        "OTP&Flowchart_1",
+        "DTOrderS24&Flowchart_1",
+        "OrderID&Flowchart_1",
+        "DTOrder_FO&Flowchart_1",
+        "NameStockOrder&Flowchart_1",
+        "PriceOrder&Flowchart_1",
+        "VolumeOrder&Flowchart_1",
+        "SubAccountOrder&Flowchart_1",
+        "IDOrder&Flowchart_1",
+        "Status&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_S24_Url",
+        "in_S24_Username",
+        "in_S24_Password",
+        "in_MobileDeviceInfo",
+        "in_AppPackage",
+        "in_AppActivity",
+        "in_PinSmartOTP",
+        "in_NameStock",
+        "in_VolumeStock",
+        "in_PriceStock",
+        "in_SMSOTP",
+        "in_Account",
+        "in_AppPath_FO",
+        "in_FO_Username",
+        "in_FO_Password"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

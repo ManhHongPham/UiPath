@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>926,1210</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1036,1210</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01_Getdata_Compare_Fill_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -167,6 +167,9 @@
                   <InArgument x:TypeArguments="x:String" x:Key="in_SubDirection">
                     <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_SubDictionary" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_PathExcelFile">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_PathExcel" />
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -183,21 +186,23 @@
                       <av:PointCollection x:Key="ConnectorLocation">280,546 280,596</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel- readfilemaster" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogExit="WithArguments" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\Excel\01_Excel_readdt.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTComparation">
-                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtCompare" />
-                      </OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_PathExcelFile">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_PathExcel" />
-                      </InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
+                  <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel- readfilemaster" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogExit="WithArguments" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\Excel\01_Excel_readMaster.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DTComparation">[dtCompare]</OutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_PathExcelFile">[in_PathExcel]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
                   <FlowStep.Next>
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
@@ -206,21 +211,23 @@
                           <av:Size x:Key="ShapeSize">200,52</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Compare" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\DoubleUI\01_Compare.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWorkItems">
-                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtACME" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCompare">
-                            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtCompare" />
-                          </InArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:InvokeWorkflowFile>
+                      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Compare" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilities\Project1\Common\Excel\02_SynthesisResult.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWorkItems">[dtACME]</InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCompare">[dtCompare]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
